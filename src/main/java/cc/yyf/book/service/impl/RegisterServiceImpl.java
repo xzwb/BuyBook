@@ -69,7 +69,6 @@ public class RegisterServiceImpl implements RegisterService {
             if (ZFJWService(person.getStudentCode(), studentPassword)) {
                 registerMapper.insertPerson(person);
                 // 使用异步保存头像文件
-                System.out.println(src);
                 new SaveFileThread(part, src).run();
 
                 return Result.build(ResultStatusEnum.SUCCESS);

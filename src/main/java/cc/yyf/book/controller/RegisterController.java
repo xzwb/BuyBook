@@ -4,9 +4,11 @@ import cc.yyf.book.pojo.Person;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.service.RegisterService;
 import cc.yyf.book.util.SnowFlake;
+import cc.yyf.book.zfjw.exception.PublicKeyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.security.auth.login.LoginException;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import javax.validation.Valid;
@@ -45,13 +47,14 @@ public class RegisterController {
                            @RequestPart("file") Part part,
                            @RequestParam String smsCode,
                            @RequestParam String studentPassword,
-                           HttpSession session) {
+                           HttpSession session) throws LoginException, PublicKeyException, cc.yyf.book.zfjw.exception.LoginException {
         // 雪花算法
         SnowFlake snowFlake = new SnowFlake(2, 3);
         String playSrcFile = snowFlake.nextId() + ".jpg";
+        person.setHeadSrc(playSrcFile);
         String src = session.getServletContext().getRealPath("/");
         // 存储图片的路径
         src += playSrcFile;
-        return null;
+        return registerService.register(person, smsCode, studentPassword, src, part);
     }
 }
