@@ -166,3 +166,17 @@
 2020-07-10 11:49:08.126  INFO 11876 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
 2020-07-10 11:49:22.315  INFO 11876 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-07-10 11:49:22.474  INFO 11876 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-10 12:33:27.818  INFO 11876 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-10 12:33:27.822  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-10 12:33:28.719  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-10 12:33:28.721  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-10 12:33:29.543  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-10 12:33:29.549  INFO 11876 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-10 12:33:29.560  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-10 12:33:29.560  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-10 12:33:29.561  INFO 11876 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-10 12:33:29.561  INFO 11876 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-10 12:33:29.561  INFO 11876 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-10 12:33:29.563  INFO 11876 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-10 12:33:29.577  INFO 11876 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-10 12:33:29.590  INFO 11876 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
