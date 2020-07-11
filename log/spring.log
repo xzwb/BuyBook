@@ -215,3 +215,51 @@ Caused by: java.net.BindException: 地址已在使用
 2020-07-11 14:26:33.152  INFO 12786 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
 2020-07-11 14:26:33.270  INFO 12786 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-07-11 14:26:33.278  INFO 12786 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-11 21:57:06.023  INFO 14016 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 14016 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
+2020-07-11 21:57:06.038  INFO 14016 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
+2020-07-11 21:57:10.067  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 21:57:10.074  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-11 21:57:10.111  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 0 Elasticsearch repository interfaces.
+2020-07-11 21:57:10.116  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 21:57:10.117  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-11 21:57:10.120  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-11 21:57:10.222  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 21:57:10.223  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-11 21:57:10.231  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 JDBC repository interfaces.
+2020-07-11 21:57:10.256  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 21:57:10.258  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-11 21:57:10.269  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+2020-07-11 21:57:11.072  INFO 14016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-07-11 21:57:11.094  INFO 14016 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-11 21:57:11.094  INFO 14016 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-07-11 21:57:11.193  INFO 14016 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-11 21:57:11.194  INFO 14016 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5053 ms
+2020-07-11 21:57:13.064  INFO 14016 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-11 21:57:13.072  INFO 14016 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-11 21:57:13.072  INFO 14016 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-11 21:57:13.072  INFO 14016 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-11 21:57:13.073  INFO 14016 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-11 21:57:13.073  INFO 14016 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-11 21:57:13.073  INFO 14016 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-11 21:57:13.073  INFO 14016 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@79ca7bea
+2020-07-11 21:57:14.049  INFO 14016 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-11 21:57:14.122  INFO 14016 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-11 21:57:14.123  INFO 14016 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-11 21:57:14.123  INFO 14016 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-11 21:57:14.173  INFO 14016 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#57c69937:0/SimpleConnection@5eee3da9 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 45496]
+2020-07-11 21:57:14.269  INFO 14016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-11 21:57:14.273  INFO 14016 --- [main] cc.yyf.book.BookApplication              : Started BookApplication in 9.518 seconds (JVM running for 11.047)
+2020-07-11 21:57:20.475  INFO 14016 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-11 21:57:20.475  INFO 14016 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-11 21:57:20.485  INFO 14016 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-07-11 21:57:20.535  INFO 14016 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-11 21:57:20.864  INFO 14016 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-11 21:57:21.141  INFO 14016 --- [http-nio-8081-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-07-11 21:57:21.142  INFO 14016 --- [http-nio-8081-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
