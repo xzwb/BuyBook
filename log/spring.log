@@ -1,27 +1,27 @@
-2020-07-10 11:39:57.657  INFO 11093 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 11093 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
-2020-07-10 11:39:57.662  INFO 11093 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
-2020-07-10 11:39:59.394  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:39:59.396  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2020-07-10 11:39:59.408  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Elasticsearch repository interfaces.
-2020-07-10 11:39:59.411  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:39:59.411  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2020-07-10 11:39:59.414  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
-2020-07-10 11:39:59.462  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:39:59.463  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-07-10 11:39:59.465  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JDBC repository interfaces.
-2020-07-10 11:39:59.478  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:39:59.482  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-07-10 11:39:59.491  INFO 11093 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 Redis repository interfaces.
-2020-07-10 11:40:00.144  INFO 11093 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2020-07-10 11:40:00.154  INFO 11093 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-10 11:40:00.155  INFO 11093 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-07-10 11:40:00.278  INFO 11093 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-10 11:40:00.279  INFO 11093 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2485 ms
-2020-07-10 11:40:01.480  INFO 11093 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2020-07-10 11:40:01.493  INFO 11093 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2020-07-10 11:40:01.493  INFO 11093 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
-2020-07-10 11:40:01.493  INFO 11093 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2020-07-10 11:40:01.494  INFO 11093 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+2020-07-11 14:21:01.070  INFO 11996 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 11996 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
+2020-07-11 14:21:01.075  INFO 11996 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
+2020-07-11 14:21:02.987  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:21:02.988  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-11 14:21:03.011  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 Elasticsearch repository interfaces.
+2020-07-11 14:21:03.014  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:21:03.014  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-11 14:21:03.017  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-11 14:21:03.073  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:21:03.073  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-11 14:21:03.076  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JDBC repository interfaces.
+2020-07-11 14:21:03.090  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:21:03.095  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-11 14:21:03.111  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
+2020-07-11 14:21:03.805  INFO 11996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-07-11 14:21:03.813  INFO 11996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-11 14:21:03.814  INFO 11996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-07-11 14:21:03.919  INFO 11996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-11 14:21:03.919  INFO 11996 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2647 ms
+2020-07-11 14:21:05.347  INFO 11996 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-11 14:21:05.355  INFO 11996 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-11 14:21:05.356  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-11 14:21:05.356  INFO 11996 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-11 14:21:05.357  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -29,57 +29,92 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2020-07-10 11:40:01.494  INFO 11093 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
-2020-07-10 11:40:01.494  INFO 11093 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
-2020-07-10 11:40:01.495  INFO 11093 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@708eb310
-2020-07-10 11:40:02.538  INFO 11093 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2020-07-10 11:40:02.601  INFO 11093 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2020-07-10 11:40:02.601  INFO 11093 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
-2020-07-10 11:40:02.602  INFO 11093 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2020-07-10 11:40:02.633  INFO 11093 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#51f68849:0/SimpleConnection@347b370c [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 38638]
-2020-07-10 11:40:02.731  INFO 11093 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-10 11:40:02.740  INFO 11093 --- [main] cc.yyf.book.BookApplication              : Started BookApplication in 5.796 seconds (JVM running for 6.977)
-2020-07-10 11:40:07.106  INFO 11093 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-10 11:40:07.109  INFO 11093 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-10 11:40:07.138  INFO 11093 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
-2020-07-10 11:40:08.593  INFO 11093 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-07-10 11:40:08.604  INFO 11093 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-07-10 11:45:59.633  INFO 11093 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-10 11:45:59.638  INFO 11093 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-10 11:46:00.001  INFO 11093 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-10 11:46:00.004  INFO 11093 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-10 11:46:00.739  INFO 11093 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-10 11:46:00.746  INFO 11093 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2020-07-10 11:46:00.753  INFO 11093 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-10 11:46:00.754  INFO 11093 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-10 11:46:00.754  INFO 11093 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
-2020-07-10 11:46:00.755  INFO 11093 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
-2020-07-10 11:46:00.755  INFO 11093 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-10 11:46:00.756  INFO 11093 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
-2020-07-10 11:46:15.597  INFO 11556 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 11556 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
-2020-07-10 11:46:15.599  INFO 11556 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
-2020-07-10 11:46:16.246  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:46:16.247  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2020-07-10 11:46:16.259  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Elasticsearch repository interfaces.
-2020-07-10 11:46:16.262  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:46:16.263  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2020-07-10 11:46:16.266  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
-2020-07-10 11:46:16.298  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:46:16.298  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-07-10 11:46:16.301  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JDBC repository interfaces.
-2020-07-10 11:46:16.317  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:46:16.318  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-07-10 11:46:16.329  INFO 11556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
-2020-07-10 11:46:16.697  INFO 11556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2020-07-10 11:46:16.703  INFO 11556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-10 11:46:16.703  INFO 11556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-07-10 11:46:16.754  INFO 11556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-10 11:46:16.754  INFO 11556 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1112 ms
-2020-07-10 11:46:17.420  INFO 11556 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2020-07-10 11:46:17.427  INFO 11556 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2020-07-10 11:46:17.427  INFO 11556 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
-2020-07-10 11:46:17.428  INFO 11556 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2020-07-10 11:46:17.428  INFO 11556 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+2020-07-11 14:21:05.357  INFO 11996 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-11 14:21:05.357  INFO 11996 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-11 14:21:05.357  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@342ee097
+2020-07-11 14:21:06.201  INFO 11996 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-11 14:21:06.272  INFO 11996 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-11 14:21:06.272  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-11 14:21:06.273  INFO 11996 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-11 14:21:06.322  INFO 11996 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4975dda1:0/SimpleConnection@18a0721b [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 41976]
+2020-07-11 14:21:06.359  INFO 11996 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-07-11 14:21:06.382  INFO 11996 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-11 14:21:06.387 ERROR 11996 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:212) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at cc.yyf.book.BookApplication.main(BookApplication.java:22) ~[classes/:na]
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:265) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:196) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	... 10 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1066) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	... 12 common frames omitted
+Caused by: java.net.BindException: 地址已在使用
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:461) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:453) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:228) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:211) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1141) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1227) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:592) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1063) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	... 14 common frames omitted
+
+2020-07-11 14:21:06.391  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-11 14:21:06.394  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-11 14:21:07.353  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-11 14:21:07.354  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-11 14:21:08.350  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-11 14:21:08.352  INFO 11996 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-11 14:21:08.355  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-11 14:21:08.355  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-11 14:21:08.355  INFO 11996 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-11 14:21:08.355  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-11 14:21:08.355  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-11 14:21:08.356  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-11 14:21:23.828  INFO 12203 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 12203 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
+2020-07-11 14:21:23.831  INFO 12203 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
+2020-07-11 14:21:24.409  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:21:24.411  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-11 14:21:24.421  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Elasticsearch repository interfaces.
+2020-07-11 14:21:24.424  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:21:24.424  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-11 14:21:24.427  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-11 14:21:24.438  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:21:24.438  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-11 14:21:24.441  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JDBC repository interfaces.
+2020-07-11 14:21:24.448  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:21:24.449  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-11 14:21:24.456  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+2020-07-11 14:21:24.847  INFO 12203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-07-11 14:21:24.853  INFO 12203 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-11 14:21:24.853  INFO 12203 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-07-11 14:21:24.901  INFO 12203 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-11 14:21:24.901  INFO 12203 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1028 ms
+2020-07-11 14:21:25.519  INFO 12203 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-11 14:21:25.526  INFO 12203 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-11 14:21:25.526  INFO 12203 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-11 14:21:25.526  INFO 12203 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-11 14:21:25.527  INFO 12203 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -87,61 +122,61 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2020-07-10 11:46:17.429  INFO 11556 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
-2020-07-10 11:46:17.429  INFO 11556 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
-2020-07-10 11:46:17.429  INFO 11556 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@228bda54
-2020-07-10 11:46:17.774  INFO 11556 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2020-07-10 11:46:17.836  INFO 11556 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2020-07-10 11:46:17.836  INFO 11556 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
-2020-07-10 11:46:17.838  INFO 11556 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2020-07-10 11:46:17.860  INFO 11556 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4409cae6:0/SimpleConnection@6cd66f6a [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 38708]
-2020-07-10 11:46:17.911  INFO 11556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-10 11:46:17.915  INFO 11556 --- [main] cc.yyf.book.BookApplication              : Started BookApplication in 2.615 seconds (JVM running for 3.139)
-2020-07-10 11:46:34.934  INFO 11556 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-10 11:46:34.936  INFO 11556 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-10 11:46:34.956  INFO 11556 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
-2020-07-10 11:46:35.302  INFO 11556 --- [http-nio-8081-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-07-10 11:46:35.306  INFO 11556 --- [http-nio-8081-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-07-10 11:47:05.702  INFO 11556 --- [http-nio-8081-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-07-10 11:47:06.058  INFO 11556 --- [http-nio-8081-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-07-10 11:48:47.206  INFO 11556 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-10 11:48:47.210  INFO 11556 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-10 11:48:47.680  INFO 11556 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-10 11:48:47.681  INFO 11556 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-10 11:48:47.923  INFO 11556 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-10 11:48:47.930  INFO 11556 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2020-07-10 11:48:47.938  INFO 11556 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-10 11:48:47.938  INFO 11556 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-10 11:48:47.939  INFO 11556 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
-2020-07-10 11:48:47.939  INFO 11556 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
-2020-07-10 11:48:47.939  INFO 11556 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-10 11:48:47.940  INFO 11556 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
-2020-07-10 11:48:47.955  INFO 11556 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-07-10 11:48:47.984  INFO 11556 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-07-10 11:48:52.817  INFO 11876 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 11876 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
-2020-07-10 11:48:52.820  INFO 11876 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
-2020-07-10 11:48:53.449  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:48:53.450  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2020-07-10 11:48:53.460  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Elasticsearch repository interfaces.
-2020-07-10 11:48:53.463  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:48:53.464  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2020-07-10 11:48:53.467  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Reactive Elasticsearch repository interfaces.
-2020-07-10 11:48:53.481  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:48:53.482  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-07-10 11:48:53.484  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JDBC repository interfaces.
-2020-07-10 11:48:53.492  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-10 11:48:53.493  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-07-10 11:48:53.499  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
-2020-07-10 11:48:53.896  INFO 11876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2020-07-10 11:48:53.902  INFO 11876 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-10 11:48:53.903  INFO 11876 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-07-10 11:48:53.953  INFO 11876 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-10 11:48:53.953  INFO 11876 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1080 ms
-2020-07-10 11:48:54.575  INFO 11876 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2020-07-10 11:48:54.582  INFO 11876 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2020-07-10 11:48:54.582  INFO 11876 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
-2020-07-10 11:48:54.583  INFO 11876 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2020-07-10 11:48:54.583  INFO 11876 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+2020-07-11 14:21:25.527  INFO 12203 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-11 14:21:25.527  INFO 12203 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-11 14:21:25.527  INFO 12203 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@7b9088f2
+2020-07-11 14:21:25.874  INFO 12203 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-11 14:21:25.934  INFO 12203 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-11 14:21:25.935  INFO 12203 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-11 14:21:25.936  INFO 12203 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-11 14:21:25.956  INFO 12203 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6aff97d6:0/SimpleConnection@4c6fc3e7 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 41998]
+2020-07-11 14:21:26.053  INFO 12203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-11 14:21:26.064  INFO 12203 --- [main] cc.yyf.book.BookApplication              : Started BookApplication in 2.518 seconds (JVM running for 3.147)
+2020-07-11 14:22:41.891  INFO 12203 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-11 14:22:41.892  INFO 12203 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-11 14:22:41.904  INFO 12203 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-07-11 14:22:41.974  INFO 12203 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-11 14:22:42.151  INFO 12203 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-11 14:22:42.567  INFO 12203 --- [http-nio-8081-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-07-11 14:22:42.571  INFO 12203 --- [http-nio-8081-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-07-11 14:24:45.012  INFO 12203 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-11 14:24:45.020  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-11 14:24:45.036  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-11 14:24:45.038  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-11 14:24:46.029  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-11 14:24:46.035  INFO 12203 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-11 14:24:46.037  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-11 14:24:46.038  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-11 14:24:46.038  INFO 12203 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-11 14:24:46.038  INFO 12203 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-11 14:24:46.038  INFO 12203 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-11 14:24:46.038  INFO 12203 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-11 14:24:46.162  INFO 12203 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-11 14:24:46.182  INFO 12203 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-11 14:24:49.952  INFO 12786 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 12786 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
+2020-07-11 14:24:49.954  INFO 12786 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
+2020-07-11 14:24:50.542  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:24:50.543  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-11 14:24:50.553  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Elasticsearch repository interfaces.
+2020-07-11 14:24:50.555  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:24:50.556  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-11 14:24:50.558  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-11 14:24:50.569  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:24:50.569  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-11 14:24:50.572  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JDBC repository interfaces.
+2020-07-11 14:24:50.579  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-11 14:24:50.579  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-11 14:24:50.585  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 Redis repository interfaces.
+2020-07-11 14:24:50.977  INFO 12786 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-07-11 14:24:50.983  INFO 12786 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-11 14:24:50.984  INFO 12786 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-07-11 14:24:51.032  INFO 12786 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-11 14:24:51.032  INFO 12786 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1045 ms
+2020-07-11 14:24:51.609  INFO 12786 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-11 14:24:51.616  INFO 12786 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-11 14:24:51.616  INFO 12786 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-11 14:24:51.617  INFO 12786 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-11 14:24:51.618  INFO 12786 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -149,34 +184,34 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2020-07-10 11:48:54.583  INFO 11876 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
-2020-07-10 11:48:54.583  INFO 11876 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
-2020-07-10 11:48:54.583  INFO 11876 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@5b20706
-2020-07-10 11:48:54.905  INFO 11876 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2020-07-10 11:48:54.967  INFO 11876 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2020-07-10 11:48:54.967  INFO 11876 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
-2020-07-10 11:48:54.968  INFO 11876 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2020-07-10 11:48:54.989  INFO 11876 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#37ca3ca8:0/SimpleConnection@1d9af731 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 38762]
-2020-07-10 11:48:55.036  INFO 11876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-10 11:48:55.039  INFO 11876 --- [main] cc.yyf.book.BookApplication              : Started BookApplication in 2.512 seconds (JVM running for 3.07)
-2020-07-10 11:49:07.381  INFO 11876 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-10 11:49:07.383  INFO 11876 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-10 11:49:07.389  INFO 11876 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2020-07-10 11:49:08.125  INFO 11876 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-07-10 11:49:08.126  INFO 11876 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-07-10 11:49:22.315  INFO 11876 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-07-10 11:49:22.474  INFO 11876 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-07-10 12:33:27.818  INFO 11876 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-10 12:33:27.822  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-10 12:33:28.719  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-10 12:33:28.721  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-10 12:33:29.543  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-10 12:33:29.549  INFO 11876 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2020-07-10 12:33:29.560  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-10 12:33:29.560  INFO 11876 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-10 12:33:29.561  INFO 11876 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
-2020-07-10 12:33:29.561  INFO 11876 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
-2020-07-10 12:33:29.561  INFO 11876 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-10 12:33:29.563  INFO 11876 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
-2020-07-10 12:33:29.577  INFO 11876 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-07-10 12:33:29.590  INFO 11876 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-11 14:24:51.618  INFO 12786 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-11 14:24:51.618  INFO 12786 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-11 14:24:51.618  INFO 12786 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@46468f0
+2020-07-11 14:24:51.989  INFO 12786 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-11 14:24:52.061  INFO 12786 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-11 14:24:52.061  INFO 12786 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-11 14:24:52.062  INFO 12786 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-11 14:24:52.084  INFO 12786 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#45287377:0/SimpleConnection@5b6cc344 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 42092]
+2020-07-11 14:24:52.134  INFO 12786 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-11 14:24:52.137  INFO 12786 --- [main] cc.yyf.book.BookApplication              : Started BookApplication in 2.457 seconds (JVM running for 3.041)
+2020-07-11 14:25:02.743  INFO 12786 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-11 14:25:02.744  INFO 12786 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-11 14:25:02.753  INFO 12786 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-07-11 14:25:02.942  INFO 12786 --- [http-nio-8081-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-07-11 14:25:02.943  INFO 12786 --- [http-nio-8081-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-07-11 14:25:03.120  INFO 12786 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-11 14:25:03.259  INFO 12786 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-11 14:26:31.484  INFO 12786 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-11 14:26:31.489  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-11 14:26:32.144  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-11 14:26:32.145  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-11 14:26:33.143  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-11 14:26:33.148  INFO 12786 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-11 14:26:33.151  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-11 14:26:33.151  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-11 14:26:33.152  INFO 12786 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-11 14:26:33.152  INFO 12786 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-11 14:26:33.152  INFO 12786 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-11 14:26:33.152  INFO 12786 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-11 14:26:33.270  INFO 12786 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-11 14:26:33.278  INFO 12786 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

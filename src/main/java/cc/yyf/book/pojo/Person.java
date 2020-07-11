@@ -5,6 +5,7 @@ import org.apache.ibatis.type.Alias;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import java.io.Serializable;
 
 /**
  * 注册时接受的用户信息
@@ -12,7 +13,7 @@ import javax.validation.constraints.Pattern;
 // 设置mybatis别名
 @Alias("person")
 @Data
-public class Person {
+public class Person implements Serializable {
 
     String headSrc;
 
