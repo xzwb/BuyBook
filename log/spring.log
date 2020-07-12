@@ -1,27 +1,31 @@
-2020-07-11 14:21:01.070  INFO 11996 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 11996 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
-2020-07-11 14:21:01.075  INFO 11996 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
-2020-07-11 14:21:02.987  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:21:02.988  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2020-07-11 14:21:03.011  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 Elasticsearch repository interfaces.
-2020-07-11 14:21:03.014  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:21:03.014  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2020-07-11 14:21:03.017  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
-2020-07-11 14:21:03.073  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:21:03.073  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-07-11 14:21:03.076  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JDBC repository interfaces.
-2020-07-11 14:21:03.090  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:21:03.095  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-07-11 14:21:03.111  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
-2020-07-11 14:21:03.805  INFO 11996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2020-07-11 14:21:03.813  INFO 11996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-11 14:21:03.814  INFO 11996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-07-11 14:21:03.919  INFO 11996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-11 14:21:03.919  INFO 11996 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2647 ms
-2020-07-11 14:21:05.347  INFO 11996 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2020-07-11 14:21:05.355  INFO 11996 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2020-07-11 14:21:05.356  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
-2020-07-11 14:21:05.356  INFO 11996 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2020-07-11 14:21:05.357  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+2020-07-12 11:36:00.101  WARN 10053 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 11:36:00.181  INFO 10053 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 10053 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 11:36:00.182  INFO 10053 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 11:36:02.864  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:36:02.893  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:36:02.937  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 11:36:02.941  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:36:02.941  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:36:02.948  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 11:36:03.002  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:36:03.004  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 11:36:03.008  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JDBC repository interfaces.
+2020-07-12 11:36:03.039  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:36:03.040  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 11:36:03.057  INFO 10053 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
+2020-07-12 11:36:09.207  INFO 10053 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 11:36:09.230  INFO 10053 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 11:36:09.230  INFO 10053 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 11:36:09.231  INFO 10053 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 11:36:09.232  INFO 10053 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -29,92 +33,55 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2020-07-11 14:21:05.357  INFO 11996 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
-2020-07-11 14:21:05.357  INFO 11996 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
-2020-07-11 14:21:05.357  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@342ee097
-2020-07-11 14:21:06.201  INFO 11996 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2020-07-11 14:21:06.272  INFO 11996 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2020-07-11 14:21:06.272  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
-2020-07-11 14:21:06.273  INFO 11996 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2020-07-11 14:21:06.322  INFO 11996 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4975dda1:0/SimpleConnection@18a0721b [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 41976]
-2020-07-11 14:21:06.359  INFO 11996 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2020-07-11 14:21:06.382  INFO 11996 --- [main] ConditionEvaluationReportLoggingListener : 
+2020-07-12 11:36:09.232  INFO 10053 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 11:36:09.232  INFO 10053 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 11:36:09.232  INFO 10053 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@16a6dc21
+2020-07-12 11:36:10.569  INFO 10053 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 11:36:10.639  INFO 10053 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 11:36:10.639  INFO 10053 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 11:36:10.641  INFO 10053 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 11:36:10.709  INFO 10053 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#12209826:0/SimpleConnection@155c7eae [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 42762]
+2020-07-12 11:36:10.762  INFO 10053 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 11.264 seconds (JVM running for 14.182)
+2020-07-12 11:36:11.366  INFO 10053 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:36:11.370  INFO 10053 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:36:11.755  INFO 10053 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:36:11.758  INFO 10053 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:36:12.753  INFO 10053 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:36:12.763  INFO 10053 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 11:36:12.766  INFO 10053 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:36:12.766  INFO 10053 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:36:12.767  INFO 10053 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 11:36:12.767  INFO 10053 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 11:36:12.767  INFO 10053 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:36:12.767  INFO 10053 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 11:51:15.101  WARN 11233 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-07-11 14:21:06.387 ERROR 11996 --- [main] o.s.boot.SpringApplication               : Application run failed
+Found multiple occurrences of org.json.JSONObject on the class path:
 
-org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:212) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at cc.yyf.book.BookApplication.main(BookApplication.java:22) ~[classes/:na]
-Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:265) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:196) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	... 10 common frames omitted
-Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1066) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	... 12 common frames omitted
-Caused by: java.net.BindException: 地址已在使用
-	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
-	at java.base/sun.nio.ch.Net.bind(Net.java:461) ~[na:na]
-	at java.base/sun.nio.ch.Net.bind(Net.java:453) ~[na:na]
-	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227) ~[na:na]
-	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80) ~[na:na]
-	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:228) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:211) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1141) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1227) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:592) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1063) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	... 14 common frames omitted
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
 
-2020-07-11 14:21:06.391  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-11 14:21:06.394  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-11 14:21:07.353  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-11 14:21:07.354  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-11 14:21:08.350  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-11 14:21:08.352  INFO 11996 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2020-07-11 14:21:08.355  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-11 14:21:08.355  INFO 11996 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-11 14:21:08.355  INFO 11996 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
-2020-07-11 14:21:08.355  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
-2020-07-11 14:21:08.355  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-11 14:21:08.356  INFO 11996 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
-2020-07-11 14:21:23.828  INFO 12203 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 12203 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
-2020-07-11 14:21:23.831  INFO 12203 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
-2020-07-11 14:21:24.409  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:21:24.411  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2020-07-11 14:21:24.421  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Elasticsearch repository interfaces.
-2020-07-11 14:21:24.424  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:21:24.424  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2020-07-11 14:21:24.427  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
-2020-07-11 14:21:24.438  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:21:24.438  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-07-11 14:21:24.441  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JDBC repository interfaces.
-2020-07-11 14:21:24.448  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:21:24.449  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-07-11 14:21:24.456  INFO 12203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
-2020-07-11 14:21:24.847  INFO 12203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2020-07-11 14:21:24.853  INFO 12203 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-11 14:21:24.853  INFO 12203 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-07-11 14:21:24.901  INFO 12203 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-11 14:21:24.901  INFO 12203 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1028 ms
-2020-07-11 14:21:25.519  INFO 12203 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2020-07-11 14:21:25.526  INFO 12203 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2020-07-11 14:21:25.526  INFO 12203 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
-2020-07-11 14:21:25.526  INFO 12203 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2020-07-11 14:21:25.527  INFO 12203 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 11:51:15.114  INFO 11233 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 11233 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 11:51:15.115  INFO 11233 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 11:51:16.274  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:51:16.277  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:51:16.295  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 11:51:16.300  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:51:16.301  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:51:16.305  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 11:51:16.324  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:51:16.324  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 11:51:16.328  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JDBC repository interfaces.
+2020-07-12 11:51:16.357  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:51:16.363  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 11:51:16.391  INFO 11233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-07-12 11:51:19.051  INFO 11233 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 11:51:19.064  INFO 11233 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 11:51:19.065  INFO 11233 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 11:51:19.065  INFO 11233 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 11:51:19.066  INFO 11233 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -122,61 +89,61 @@ Caused by: java.net.BindException: 地址已在使用
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2020-07-11 14:21:25.527  INFO 12203 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
-2020-07-11 14:21:25.527  INFO 12203 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
-2020-07-11 14:21:25.527  INFO 12203 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@7b9088f2
-2020-07-11 14:21:25.874  INFO 12203 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2020-07-11 14:21:25.934  INFO 12203 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2020-07-11 14:21:25.935  INFO 12203 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
-2020-07-11 14:21:25.936  INFO 12203 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2020-07-11 14:21:25.956  INFO 12203 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6aff97d6:0/SimpleConnection@4c6fc3e7 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 41998]
-2020-07-11 14:21:26.053  INFO 12203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-11 14:21:26.064  INFO 12203 --- [main] cc.yyf.book.BookApplication              : Started BookApplication in 2.518 seconds (JVM running for 3.147)
-2020-07-11 14:22:41.891  INFO 12203 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-11 14:22:41.892  INFO 12203 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-11 14:22:41.904  INFO 12203 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2020-07-11 14:22:41.974  INFO 12203 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-07-11 14:22:42.151  INFO 12203 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-07-11 14:22:42.567  INFO 12203 --- [http-nio-8081-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-07-11 14:22:42.571  INFO 12203 --- [http-nio-8081-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-07-11 14:24:45.012  INFO 12203 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-11 14:24:45.020  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-11 14:24:45.036  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-11 14:24:45.038  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-11 14:24:46.029  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-11 14:24:46.035  INFO 12203 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2020-07-11 14:24:46.037  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-11 14:24:46.038  INFO 12203 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-11 14:24:46.038  INFO 12203 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
-2020-07-11 14:24:46.038  INFO 12203 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
-2020-07-11 14:24:46.038  INFO 12203 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-11 14:24:46.038  INFO 12203 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
-2020-07-11 14:24:46.162  INFO 12203 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-07-11 14:24:46.182  INFO 12203 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-07-11 14:24:49.952  INFO 12786 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 12786 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
-2020-07-11 14:24:49.954  INFO 12786 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
-2020-07-11 14:24:50.542  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:24:50.543  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2020-07-11 14:24:50.553  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Elasticsearch repository interfaces.
-2020-07-11 14:24:50.555  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:24:50.556  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2020-07-11 14:24:50.558  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
-2020-07-11 14:24:50.569  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:24:50.569  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-07-11 14:24:50.572  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JDBC repository interfaces.
-2020-07-11 14:24:50.579  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 14:24:50.579  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-07-11 14:24:50.585  INFO 12786 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 Redis repository interfaces.
-2020-07-11 14:24:50.977  INFO 12786 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2020-07-11 14:24:50.983  INFO 12786 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-11 14:24:50.984  INFO 12786 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-07-11 14:24:51.032  INFO 12786 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-11 14:24:51.032  INFO 12786 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1045 ms
-2020-07-11 14:24:51.609  INFO 12786 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2020-07-11 14:24:51.616  INFO 12786 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2020-07-11 14:24:51.616  INFO 12786 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
-2020-07-11 14:24:51.617  INFO 12786 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2020-07-11 14:24:51.618  INFO 12786 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+2020-07-12 11:51:19.066  INFO 11233 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 11:51:19.066  INFO 11233 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 11:51:19.067  INFO 11233 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@239b98cb
+2020-07-12 11:51:19.863  WARN 11233 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:51:19.864  WARN 11233 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:51:19.864  WARN 11233 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:51:19.864  WARN 11233 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:51:20.114  INFO 11233 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 11:51:20.114  INFO 11233 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 11:51:20.114  INFO 11233 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 11:51:20.114  INFO 11233 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 11:51:20.208  INFO 11233 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 11:51:20.445  INFO 11233 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 11:51:20.685  INFO 11233 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 11:51:20.735  INFO 11233 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 11:51:20.736  INFO 11233 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 11:51:20.737  INFO 11233 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 11:51:20.826  INFO 11233 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#704d3b00:0/SimpleConnection@76673ed [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 43094]
+2020-07-12 11:51:20.873  INFO 11233 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 6.033 seconds (JVM running for 7.51)
+2020-07-12 11:51:21.350  INFO 11233 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:51:21.353  INFO 11233 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:51:21.862  INFO 11233 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:51:21.863  INFO 11233 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:51:22.865  INFO 11233 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:51:22.874  INFO 11233 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 11:51:22.880  INFO 11233 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:51:22.880  INFO 11233 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:51:22.881  INFO 11233 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 11:51:22.882  INFO 11233 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 11:51:22.882  INFO 11233 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:51:22.884  INFO 11233 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 11:51:22.911  INFO 11233 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 11:51:22.928  INFO 11233 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 11:51:47.093  WARN 11609 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 11:51:47.113  INFO 11609 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 11609 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 11:51:47.114  INFO 11609 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 11:51:48.088  INFO 11609 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:51:48.089  INFO 11609 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 11:51:48.115  INFO 11609 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 JDBC repository interfaces.
+2020-07-12 11:51:48.134  INFO 11609 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:51:48.135  INFO 11609 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 11:51:48.154  INFO 11609 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2020-07-12 11:51:50.122  INFO 11609 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 11:51:50.134  INFO 11609 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 11:51:50.134  INFO 11609 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 11:51:50.135  INFO 11609 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 11:51:50.136  INFO 11609 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -184,61 +151,59 @@ Caused by: java.net.BindException: 地址已在使用
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2020-07-11 14:24:51.618  INFO 12786 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
-2020-07-11 14:24:51.618  INFO 12786 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
-2020-07-11 14:24:51.618  INFO 12786 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@46468f0
-2020-07-11 14:24:51.989  INFO 12786 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2020-07-11 14:24:52.061  INFO 12786 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2020-07-11 14:24:52.061  INFO 12786 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
-2020-07-11 14:24:52.062  INFO 12786 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2020-07-11 14:24:52.084  INFO 12786 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#45287377:0/SimpleConnection@5b6cc344 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 42092]
-2020-07-11 14:24:52.134  INFO 12786 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-11 14:24:52.137  INFO 12786 --- [main] cc.yyf.book.BookApplication              : Started BookApplication in 2.457 seconds (JVM running for 3.041)
-2020-07-11 14:25:02.743  INFO 12786 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-11 14:25:02.744  INFO 12786 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-11 14:25:02.753  INFO 12786 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2020-07-11 14:25:02.942  INFO 12786 --- [http-nio-8081-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-07-11 14:25:02.943  INFO 12786 --- [http-nio-8081-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-07-11 14:25:03.120  INFO 12786 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-07-11 14:25:03.259  INFO 12786 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-07-11 14:26:31.484  INFO 12786 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-11 14:26:31.489  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-11 14:26:32.144  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-11 14:26:32.145  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2020-07-11 14:26:33.143  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2020-07-11 14:26:33.148  INFO 12786 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2020-07-11 14:26:33.151  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-11 14:26:33.151  INFO 12786 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
-2020-07-11 14:26:33.152  INFO 12786 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
-2020-07-11 14:26:33.152  INFO 12786 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
-2020-07-11 14:26:33.152  INFO 12786 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
-2020-07-11 14:26:33.152  INFO 12786 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
-2020-07-11 14:26:33.270  INFO 12786 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-07-11 14:26:33.278  INFO 12786 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-07-11 21:57:06.023  INFO 14016 --- [main] cc.yyf.book.BookApplication              : Starting BookApplication on xzwb with PID 14016 (/home/xzwb/BuyBook/target/classes started by xzwb in /home/xzwb/BuyBook)
-2020-07-11 21:57:06.038  INFO 14016 --- [main] cc.yyf.book.BookApplication              : No active profile set, falling back to default profiles: default
-2020-07-11 21:57:10.067  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 21:57:10.074  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2020-07-11 21:57:10.111  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 0 Elasticsearch repository interfaces.
-2020-07-11 21:57:10.116  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 21:57:10.117  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2020-07-11 21:57:10.120  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Reactive Elasticsearch repository interfaces.
-2020-07-11 21:57:10.222  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 21:57:10.223  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2020-07-11 21:57:10.231  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 JDBC repository interfaces.
-2020-07-11 21:57:10.256  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-11 21:57:10.258  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-07-11 21:57:10.269  INFO 14016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
-2020-07-11 21:57:11.072  INFO 14016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2020-07-11 21:57:11.094  INFO 14016 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-11 21:57:11.094  INFO 14016 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-07-11 21:57:11.193  INFO 14016 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-11 21:57:11.194  INFO 14016 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5053 ms
-2020-07-11 21:57:13.064  INFO 14016 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2020-07-11 21:57:13.072  INFO 14016 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2020-07-11 21:57:13.072  INFO 14016 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
-2020-07-11 21:57:13.072  INFO 14016 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2020-07-11 21:57:13.073  INFO 14016 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+2020-07-12 11:51:50.136  INFO 11609 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 11:51:50.136  INFO 11609 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 11:51:50.136  INFO 11609 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@615e83ac
+2020-07-12 11:51:50.571  INFO 11609 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 11:51:50.711  INFO 11609 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 11:51:50.980  INFO 11609 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 11:51:51.028  INFO 11609 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 11:51:51.029  INFO 11609 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 11:51:51.031  INFO 11609 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 11:51:51.081  INFO 11609 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#d49e8c6:0/SimpleConnection@18ff753c [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 43134]
+2020-07-12 11:51:51.132  INFO 11609 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 4.424 seconds (JVM running for 5.797)
+2020-07-12 11:51:51.585  INFO 11609 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:51:51.589  INFO 11609 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:51:52.125  INFO 11609 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:51:52.128  INFO 11609 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:51:53.125  INFO 11609 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:51:53.133  INFO 11609 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 11:51:53.137  INFO 11609 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:51:53.138  INFO 11609 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:51:53.138  INFO 11609 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 11:51:53.139  INFO 11609 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 11:51:53.139  INFO 11609 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:51:53.140  INFO 11609 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 11:51:53.166  INFO 11609 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 11:51:53.175  INFO 11609 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 11:52:56.128  WARN 11990 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 11:52:56.153  INFO 11990 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 11990 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 11:52:56.155  INFO 11990 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 11:52:56.854  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:52:56.856  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:52:56.870  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 11:52:56.874  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:52:56.875  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:52:56.879  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 11:52:56.914  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:52:56.914  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 11:52:56.920  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 JDBC repository interfaces.
+2020-07-12 11:52:56.939  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:52:56.940  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 11:52:56.953  INFO 11990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2020-07-12 11:52:59.084  INFO 11990 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 11:52:59.097  INFO 11990 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 11:52:59.098  INFO 11990 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 11:52:59.099  INFO 11990 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 11:52:59.100  INFO 11990 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -246,20 +211,840 @@ Caused by: java.net.BindException: 地址已在使用
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2020-07-11 21:57:13.073  INFO 14016 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
-2020-07-11 21:57:13.073  INFO 14016 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
-2020-07-11 21:57:13.073  INFO 14016 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@79ca7bea
-2020-07-11 21:57:14.049  INFO 14016 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2020-07-11 21:57:14.122  INFO 14016 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2020-07-11 21:57:14.123  INFO 14016 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
-2020-07-11 21:57:14.123  INFO 14016 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2020-07-11 21:57:14.173  INFO 14016 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#57c69937:0/SimpleConnection@5eee3da9 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 45496]
-2020-07-11 21:57:14.269  INFO 14016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-11 21:57:14.273  INFO 14016 --- [main] cc.yyf.book.BookApplication              : Started BookApplication in 9.518 seconds (JVM running for 11.047)
-2020-07-11 21:57:20.475  INFO 14016 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-11 21:57:20.475  INFO 14016 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-11 21:57:20.485  INFO 14016 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2020-07-11 21:57:20.535  INFO 14016 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-07-11 21:57:20.864  INFO 14016 --- [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-07-11 21:57:21.141  INFO 14016 --- [http-nio-8081-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-07-11 21:57:21.142  INFO 14016 --- [http-nio-8081-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-07-12 11:52:59.100  INFO 11990 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 11:52:59.100  INFO 11990 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 11:52:59.100  INFO 11990 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@d108406
+2020-07-12 11:52:59.812  INFO 11990 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 11:52:59.881  INFO 11990 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 11:52:59.882  INFO 11990 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 11:52:59.883  INFO 11990 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 11:52:59.934  INFO 11990 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4a9869a8:0/SimpleConnection@147059f8 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 43148]
+2020-07-12 11:52:59.999  INFO 11990 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 4.278 seconds (JVM running for 5.485)
+2020-07-12 11:53:00.349  INFO 11990 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:53:00.353  INFO 11990 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:53:00.991  INFO 11990 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:53:00.994  INFO 11990 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:53:01.990  INFO 11990 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:53:01.999  INFO 11990 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 11:53:02.004  INFO 11990 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:53:02.005  INFO 11990 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:53:02.006  INFO 11990 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 11:53:02.006  INFO 11990 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 11:53:02.007  INFO 11990 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:53:02.008  INFO 11990 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 11:54:02.535  WARN 12188 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 11:54:02.556  INFO 12188 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 12188 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 11:54:02.558  INFO 12188 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 11:54:03.467  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:54:03.469  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:54:03.484  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 11:54:03.488  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:54:03.489  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:54:03.493  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 11:54:03.513  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:54:03.513  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 11:54:03.519  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 JDBC repository interfaces.
+2020-07-12 11:54:03.534  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:54:03.535  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 11:54:03.546  INFO 12188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2020-07-12 11:54:05.467  INFO 12188 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 11:54:05.482  INFO 12188 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 11:54:05.482  INFO 12188 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 11:54:05.483  INFO 12188 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 11:54:05.484  INFO 12188 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 11:54:05.484  INFO 12188 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 11:54:05.484  INFO 12188 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 11:54:05.484  INFO 12188 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@439d545c
+2020-07-12 11:54:05.802  WARN 12188 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:54:05.802  WARN 12188 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:54:05.802  WARN 12188 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:54:05.802  WARN 12188 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:54:05.911  INFO 12188 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 11:54:05.911  INFO 12188 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 11:54:05.913  INFO 12188 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 11:54:05.913  INFO 12188 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 11:54:06.034  INFO 12188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 11:54:06.182  INFO 12188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 11:54:06.456  INFO 12188 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 11:54:06.507  INFO 12188 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 11:54:06.508  INFO 12188 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 11:54:06.510  INFO 12188 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 11:54:06.558  INFO 12188 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2e7bb00e:0/SimpleConnection@6be1f37f [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 43200]
+2020-07-12 11:54:06.622  INFO 12188 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 4.506 seconds (JVM running for 5.656)
+2020-07-12 11:54:06.914  INFO 12188 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:54:06.919  INFO 12188 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:54:07.615  INFO 12188 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:54:07.617  INFO 12188 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:54:08.612  INFO 12188 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:54:08.618  INFO 12188 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 11:54:08.619  INFO 12188 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:54:08.620  INFO 12188 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:54:08.620  INFO 12188 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 11:54:08.620  INFO 12188 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 11:54:08.620  INFO 12188 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:54:08.621  INFO 12188 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 11:54:08.635  INFO 12188 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 11:54:08.644  INFO 12188 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 11:57:05.597  WARN 12674 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 11:57:05.627  INFO 12674 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 12674 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 11:57:05.629  INFO 12674 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 11:57:06.916  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:57:06.920  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:57:06.949  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 11:57:06.963  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:57:06.964  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:57:06.974  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 11:57:07.011  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:57:07.012  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 11:57:07.015  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JDBC repository interfaces.
+2020-07-12 11:57:07.046  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:57:07.048  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 11:57:07.069  INFO 12674 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2020-07-12 11:57:09.921  INFO 12674 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 11:57:09.949  INFO 12674 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 11:57:09.950  INFO 12674 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 11:57:09.951  INFO 12674 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 11:57:09.954  INFO 12674 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 11:57:09.955  INFO 12674 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 11:57:09.956  INFO 12674 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 11:57:09.956  INFO 12674 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@439d545c
+2020-07-12 11:57:10.604  WARN 12674 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:57:10.604  WARN 12674 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:57:10.604  WARN 12674 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:57:10.605  WARN 12674 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:57:10.860  INFO 12674 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 11:57:10.862  INFO 12674 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 11:57:10.864  INFO 12674 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 11:57:10.865  INFO 12674 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 11:57:11.105  INFO 12674 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 11:57:11.307  INFO 12674 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 11:57:11.818  INFO 12674 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 11:57:11.920  INFO 12674 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 11:57:11.921  INFO 12674 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 11:57:11.922  INFO 12674 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 11:57:11.972  INFO 12674 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#75ed7512:0/SimpleConnection@46c2189e [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 43292]
+2020-07-12 11:57:12.015  INFO 12674 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 6.961 seconds (JVM running for 8.816)
+2020-07-12 11:57:12.351  INFO 12674 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:57:12.355  INFO 12674 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:57:13.007  INFO 12674 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:57:13.008  INFO 12674 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:57:14.008  INFO 12674 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:57:14.016  INFO 12674 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 11:57:14.021  INFO 12674 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:57:14.022  INFO 12674 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:57:14.023  INFO 12674 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 11:57:14.023  INFO 12674 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 11:57:14.024  INFO 12674 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:57:14.027  INFO 12674 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 11:57:14.064  INFO 12674 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 11:57:14.078  INFO 12674 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 11:57:27.095  WARN 12994 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 11:57:27.114  INFO 12994 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 12994 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 11:57:27.115  INFO 12994 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 11:57:28.134  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:57:28.136  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:57:28.153  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 11:57:28.159  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:57:28.160  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 11:57:28.165  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 11:57:28.185  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:57:28.185  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 11:57:28.189  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JDBC repository interfaces.
+2020-07-12 11:57:28.201  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 11:57:28.202  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 11:57:28.211  INFO 12994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
+2020-07-12 11:57:30.164  INFO 12994 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 11:57:30.176  INFO 12994 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 11:57:30.176  INFO 12994 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 11:57:30.177  INFO 12994 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 11:57:30.178  INFO 12994 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 11:57:30.178  INFO 12994 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 11:57:30.178  INFO 12994 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 11:57:30.178  INFO 12994 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@2cee5365
+2020-07-12 11:57:30.527  WARN 12994 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:57:30.527  WARN 12994 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:57:30.527  WARN 12994 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:57:30.527  WARN 12994 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 11:57:30.643  INFO 12994 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 11:57:30.644  INFO 12994 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 11:57:30.644  INFO 12994 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 11:57:30.644  INFO 12994 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 11:57:30.739  INFO 12994 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 11:57:30.885  INFO 12994 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 11:57:31.137  INFO 12994 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 11:57:31.186  INFO 12994 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 11:57:31.186  INFO 12994 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 11:57:31.188  INFO 12994 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 11:57:31.232  INFO 12994 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5b4954b2:0/SimpleConnection@1c0fe6c5 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 43324]
+2020-07-12 11:57:31.281  INFO 12994 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 4.571 seconds (JVM running for 6.069)
+2020-07-12 11:57:31.606  INFO 12994 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:57:31.610  INFO 12994 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:57:32.273  INFO 12994 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:57:32.275  INFO 12994 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 11:57:33.273  INFO 12994 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 11:57:33.280  INFO 12994 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 11:57:33.284  INFO 12994 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:57:33.285  INFO 12994 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 11:57:33.286  INFO 12994 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 11:57:33.286  INFO 12994 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 11:57:33.286  INFO 12994 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 11:57:33.288  INFO 12994 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 11:57:33.333  INFO 12994 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 11:57:33.346  INFO 12994 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 12:00:34.820  WARN 13422 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 12:00:34.851  INFO 13422 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 13422 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 12:00:34.854  INFO 13422 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 12:00:36.207  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:00:36.210  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 12:00:36.236  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 12:00:36.246  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:00:36.247  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 12:00:36.253  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 12:00:36.296  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:00:36.296  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 12:00:36.303  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 JDBC repository interfaces.
+2020-07-12 12:00:36.329  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:00:36.331  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 12:00:36.349  INFO 13422 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
+2020-07-12 12:00:40.400  INFO 13422 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 12:00:40.433  INFO 13422 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 12:00:40.435  INFO 13422 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 12:00:40.438  INFO 13422 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 12:00:40.440  INFO 13422 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 12:00:40.451  INFO 13422 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 12:00:40.451  INFO 13422 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 12:00:40.452  INFO 13422 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@781c2497
+2020-07-12 12:00:41.555  WARN 13422 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:00:41.556  WARN 13422 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:00:41.556  WARN 13422 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:00:41.556  WARN 13422 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:00:41.891  INFO 13422 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 12:00:41.892  INFO 13422 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 12:00:41.892  INFO 13422 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 12:00:41.893  INFO 13422 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 12:00:42.094  INFO 13422 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 12:00:42.362  INFO 13422 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 12:00:42.850  INFO 13422 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 12:00:42.950  INFO 13422 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 12:00:42.951  INFO 13422 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 12:00:42.953  INFO 13422 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 12:00:43.051  INFO 13422 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#283d3628:0/SimpleConnection@69ed96e1 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 43390]
+2020-07-12 12:00:43.126  INFO 13422 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 8.868 seconds (JVM running for 10.641)
+2020-07-12 12:00:43.705  INFO 13422 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 12:00:43.718  INFO 13422 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 12:00:44.113  INFO 13422 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 12:00:44.114  INFO 13422 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 12:00:45.111  INFO 13422 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 12:00:45.114  INFO 13422 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 12:00:45.116  INFO 13422 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 12:00:45.116  INFO 13422 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 12:00:45.117  INFO 13422 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 12:00:45.118  INFO 13422 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 12:00:45.118  INFO 13422 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 12:00:45.119  INFO 13422 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 12:00:45.145  INFO 13422 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 12:00:45.162  INFO 13422 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 12:01:06.513  WARN 13754 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 12:01:06.531  INFO 13754 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 13754 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 12:01:06.532  INFO 13754 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 12:01:07.353  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:01:07.355  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 12:01:07.381  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 12:01:07.390  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:01:07.391  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 12:01:07.398  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 12:01:07.445  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:01:07.445  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 12:01:07.455  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 JDBC repository interfaces.
+2020-07-12 12:01:07.485  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:01:07.490  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 12:01:07.520  INFO 13754 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+2020-07-12 12:01:09.831  INFO 13754 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 12:01:09.846  INFO 13754 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 12:01:09.846  INFO 13754 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 12:01:09.848  INFO 13754 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 12:01:09.849  INFO 13754 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 12:01:09.849  INFO 13754 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 12:01:09.849  INFO 13754 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 12:01:09.850  INFO 13754 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@439d545c
+2020-07-12 12:01:10.340  WARN 13754 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:01:10.341  WARN 13754 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:01:10.341  WARN 13754 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:01:10.341  WARN 13754 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:01:10.456  INFO 13754 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 12:01:10.456  INFO 13754 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 12:01:10.456  INFO 13754 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 12:01:10.456  INFO 13754 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 12:01:10.598  INFO 13754 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 12:01:10.794  INFO 13754 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 12:01:11.101  INFO 13754 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 12:01:11.221  INFO 13754 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 12:01:11.221  INFO 13754 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 12:01:11.223  INFO 13754 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 12:01:11.289  INFO 13754 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5fd18419:0/SimpleConnection@5b028f58 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 43424]
+2020-07-12 12:01:11.359  INFO 13754 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 5.267 seconds (JVM running for 6.596)
+2020-07-12 12:01:11.936  INFO 13754 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 12:01:11.941  INFO 13754 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 12:01:12.347  INFO 13754 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 12:01:12.349  INFO 13754 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 12:01:13.346  INFO 13754 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 12:01:13.354  INFO 13754 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 12:01:13.360  INFO 13754 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 12:01:13.361  INFO 13754 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 12:01:13.361  INFO 13754 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 12:01:13.362  INFO 13754 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 12:01:13.362  INFO 13754 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 12:01:13.363  INFO 13754 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 12:01:13.400  INFO 13754 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 12:01:13.410  INFO 13754 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 12:01:48.468  WARN 14107 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 12:01:48.491  INFO 14107 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 14107 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 12:01:48.493  INFO 14107 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 12:01:49.768  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:01:49.770  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 12:01:49.788  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 12:01:49.797  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:01:49.799  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 12:01:49.803  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 12:01:49.829  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:01:49.830  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 12:01:49.836  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 JDBC repository interfaces.
+2020-07-12 12:01:49.854  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:01:49.856  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 12:01:49.872  INFO 14107 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
+2020-07-12 12:01:53.249  INFO 14107 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 12:01:53.271  INFO 14107 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 12:01:53.271  INFO 14107 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 12:01:53.273  INFO 14107 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 12:01:53.275  INFO 14107 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 12:01:53.275  INFO 14107 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 12:01:53.275  INFO 14107 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 12:01:53.276  INFO 14107 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@6c6928c
+2020-07-12 12:01:54.055  WARN 14107 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:01:54.055  WARN 14107 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:01:54.055  WARN 14107 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:01:54.056  WARN 14107 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:01:54.253  INFO 14107 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 12:01:54.254  INFO 14107 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 12:01:54.254  INFO 14107 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 12:01:54.254  INFO 14107 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 12:01:54.446  INFO 14107 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 12:01:54.676  INFO 14107 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 12:01:55.064  INFO 14107 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 12:01:55.134  INFO 14107 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 12:01:55.135  INFO 14107 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 12:01:55.138  INFO 14107 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 12:01:55.231  INFO 14107 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3a88f6fb:0/SimpleConnection@1e4d93f7 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 43462]
+2020-07-12 12:01:55.322  INFO 14107 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 7.54 seconds (JVM running for 9.425)
+2020-07-12 12:01:56.014  INFO 14107 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 12:01:56.019  INFO 14107 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 12:01:56.301  INFO 14107 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 12:01:56.302  INFO 14107 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 12:01:56.304  INFO 14107 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 12:01:56.313  INFO 14107 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 12:01:56.316  INFO 14107 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 12:01:56.316  INFO 14107 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 12:01:56.316  INFO 14107 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 12:01:56.317  INFO 14107 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 12:01:56.317  INFO 14107 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 12:01:56.317  INFO 14107 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 12:01:56.346  INFO 14107 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 12:01:56.361  INFO 14107 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 12:02:23.437  WARN 14441 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 12:02:23.451  INFO 14441 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 14441 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 12:02:23.452  INFO 14441 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 12:02:24.240  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:02:24.242  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 12:02:24.258  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 12:02:24.262  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:02:24.263  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 12:02:24.267  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 12:02:24.286  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:02:24.287  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 12:02:24.290  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JDBC repository interfaces.
+2020-07-12 12:02:24.301  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 12:02:24.303  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 12:02:24.314  INFO 14441 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
+2020-07-12 12:02:26.254  INFO 14441 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 12:02:26.266  INFO 14441 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 12:02:26.266  INFO 14441 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 12:02:26.266  INFO 14441 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 12:02:26.267  INFO 14441 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 12:02:26.267  INFO 14441 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 12:02:26.267  INFO 14441 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 12:02:26.268  INFO 14441 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@1a0f349
+2020-07-12 12:02:26.765  WARN 14441 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:02:26.766  WARN 14441 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:02:26.766  WARN 14441 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:02:26.766  WARN 14441 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 12:02:26.949  INFO 14441 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 12:02:26.949  INFO 14441 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 12:02:26.949  INFO 14441 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 12:02:26.949  INFO 14441 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 12:02:27.102  INFO 14441 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 12:02:27.320  INFO 14441 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 12:02:27.919  INFO 14441 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 12:02:27.974  INFO 14441 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 12:02:27.975  INFO 14441 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 12:02:27.976  INFO 14441 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 12:02:28.087  INFO 14441 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#283d3628:0/SimpleConnection@69ed96e1 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 43504]
+2020-07-12 12:02:28.143  INFO 14441 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 5.231 seconds (JVM running for 6.561)
+2020-07-12 12:02:28.529  INFO 14441 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 12:02:28.534  INFO 14441 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 12:02:29.130  INFO 14441 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 12:02:29.132  INFO 14441 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 12:02:30.129  INFO 14441 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 12:02:30.134  INFO 14441 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 12:02:30.137  INFO 14441 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 12:02:30.137  INFO 14441 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 12:02:30.138  INFO 14441 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 12:02:30.138  INFO 14441 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 12:02:30.138  INFO 14441 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 12:02:30.139  INFO 14441 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 12:02:30.166  INFO 14441 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 12:02:30.176  INFO 14441 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 13:33:26.547  WARN 17563 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 13:33:26.573  INFO 17563 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 17563 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 13:33:26.574  INFO 17563 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 13:33:27.620  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:33:27.622  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 13:33:27.656  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 13:33:27.669  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:33:27.673  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 13:33:27.681  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 13:33:27.714  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:33:27.715  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 13:33:27.724  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 JDBC repository interfaces.
+2020-07-12 13:33:27.744  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:33:27.745  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 13:33:27.762  INFO 17563 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2020-07-12 13:33:30.423  INFO 17563 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 13:33:30.438  INFO 17563 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 13:33:30.439  INFO 17563 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 13:33:30.442  INFO 17563 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 13:33:30.443  INFO 17563 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 13:33:30.444  INFO 17563 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 13:33:30.444  INFO 17563 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 13:33:30.444  INFO 17563 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@3c60c681
+2020-07-12 13:33:30.978  WARN 17563 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:33:30.978  WARN 17563 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:33:30.978  WARN 17563 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:33:30.978  WARN 17563 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:33:31.139  INFO 17563 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 13:33:31.139  INFO 17563 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 13:33:31.139  INFO 17563 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 13:33:31.140  INFO 17563 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 13:33:31.288  INFO 17563 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 13:33:31.489  INFO 17563 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 13:33:31.885  INFO 17563 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 13:33:31.957  INFO 17563 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 13:33:31.957  INFO 17563 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 13:33:31.959  INFO 17563 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 13:33:32.028  INFO 17563 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5b3518e1:0/SimpleConnection@61648dd2 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 44906]
+2020-07-12 13:33:32.118  INFO 17563 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 6.169 seconds (JVM running for 7.945)
+2020-07-12 13:33:32.947  INFO 17563 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 13:33:32.955  INFO 17563 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 13:33:33.078  INFO 17563 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 13:33:33.084  INFO 17563 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 13:33:34.082  INFO 17563 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 13:33:34.088  INFO 17563 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 13:33:34.090  INFO 17563 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 13:33:34.090  INFO 17563 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 13:33:34.090  INFO 17563 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 13:33:34.090  INFO 17563 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 13:33:34.091  INFO 17563 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 13:33:34.091  INFO 17563 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 13:33:34.110  INFO 17563 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 13:33:34.127  INFO 17563 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 13:52:42.602  WARN 18577 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 13:52:42.651  INFO 18577 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 18577 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 13:52:42.653  INFO 18577 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 13:52:43.981  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:52:43.984  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 13:52:44.024  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 13:52:44.039  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:52:44.041  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 13:52:44.050  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 13:52:44.089  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:52:44.089  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 13:52:44.101  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 JDBC repository interfaces.
+2020-07-12 13:52:44.132  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:52:44.134  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 13:52:44.157  INFO 18577 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2020-07-12 13:52:47.332  INFO 18577 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 13:52:47.350  INFO 18577 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 13:52:47.351  INFO 18577 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 13:52:47.352  INFO 18577 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 13:52:47.353  INFO 18577 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 13:52:47.353  INFO 18577 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 13:52:47.353  INFO 18577 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 13:52:47.354  INFO 18577 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@6c6928c
+2020-07-12 13:52:48.075  WARN 18577 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:52:48.075  WARN 18577 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:52:48.076  WARN 18577 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:52:48.076  WARN 18577 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:52:48.291  INFO 18577 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 13:52:48.292  INFO 18577 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 13:52:48.292  INFO 18577 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 13:52:48.292  INFO 18577 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 13:52:48.488  INFO 18577 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 13:52:48.834  INFO 18577 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 13:52:49.385  INFO 18577 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 13:52:49.495  INFO 18577 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 13:52:49.496  INFO 18577 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 13:52:49.500  INFO 18577 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 13:52:49.610  INFO 18577 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#704d3b00:0/SimpleConnection@522fb69 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 45186]
+2020-07-12 13:52:49.695  INFO 18577 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 7.793 seconds (JVM running for 9.523)
+2020-07-12 13:52:50.564  INFO 18577 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 13:52:50.571  INFO 18577 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 13:52:50.677  INFO 18577 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 13:52:50.678  INFO 18577 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 13:52:51.681  INFO 18577 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 13:52:51.694  INFO 18577 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 13:52:51.699  INFO 18577 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 13:52:51.700  INFO 18577 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 13:52:51.701  INFO 18577 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 13:52:51.703  INFO 18577 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 13:52:51.704  INFO 18577 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 13:52:51.706  INFO 18577 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 13:52:51.767  INFO 18577 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 13:52:51.788  INFO 18577 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 13:53:03.026  WARN 18916 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 13:53:03.066  INFO 18916 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 18916 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 13:53:03.067  INFO 18916 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 13:53:04.418  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:53:04.419  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 13:53:04.447  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 13:53:04.455  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:53:04.456  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 13:53:04.464  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 13:53:04.491  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:53:04.493  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 13:53:04.500  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 JDBC repository interfaces.
+2020-07-12 13:53:04.520  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:53:04.522  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 13:53:04.536  INFO 18916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
+2020-07-12 13:53:07.656  INFO 18916 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 13:53:07.702  INFO 18916 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 13:53:07.702  INFO 18916 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 13:53:07.703  INFO 18916 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 13:53:07.705  INFO 18916 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 13:53:07.706  INFO 18916 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 13:53:07.706  INFO 18916 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 13:53:07.708  INFO 18916 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@5e69cf07
+2020-07-12 13:53:08.346  WARN 18916 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:53:08.347  WARN 18916 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:53:08.347  WARN 18916 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:53:08.347  WARN 18916 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:53:08.525  INFO 18916 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 13:53:08.525  INFO 18916 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 13:53:08.525  INFO 18916 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 13:53:08.525  INFO 18916 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 13:53:08.715  INFO 18916 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 13:53:08.964  INFO 18916 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 13:53:09.314  INFO 18916 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 13:53:09.391  INFO 18916 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 13:53:09.391  INFO 18916 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 13:53:09.393  INFO 18916 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 13:53:09.491  INFO 18916 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#68b7bdcb:0/SimpleConnection@10553a61 [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 45216]
+2020-07-12 13:53:09.555  INFO 18916 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 7.363 seconds (JVM running for 9.316)
+2020-07-12 13:53:10.097  INFO 18916 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 13:53:10.105  INFO 18916 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 13:53:10.545  INFO 18916 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 13:53:10.550  INFO 18916 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 13:53:11.544  INFO 18916 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 13:53:11.549  INFO 18916 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 13:53:11.552  INFO 18916 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 13:53:11.553  INFO 18916 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 13:53:11.553  INFO 18916 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 13:53:11.553  INFO 18916 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 13:53:11.554  INFO 18916 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 13:53:11.554  INFO 18916 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 13:53:11.577  INFO 18916 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 13:53:11.592  INFO 18916 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 13:53:50.017  WARN 19266 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 13:53:50.035  INFO 19266 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 19266 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 13:53:50.039  INFO 19266 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 13:53:51.325  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:53:51.327  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 13:53:51.346  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 13:53:51.353  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:53:51.354  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 13:53:51.359  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 13:53:51.392  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:53:51.393  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 13:53:51.398  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 JDBC repository interfaces.
+2020-07-12 13:53:51.420  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:53:51.422  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 13:53:51.438  INFO 19266 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-07-12 13:53:54.765  INFO 19266 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 13:53:54.780  INFO 19266 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 13:53:54.781  INFO 19266 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 13:53:54.783  INFO 19266 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 13:53:54.784  INFO 19266 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 13:53:54.784  INFO 19266 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 13:53:54.784  INFO 19266 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 13:53:54.784  INFO 19266 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@1fc0d9b4
+2020-07-12 13:53:55.274  WARN 19266 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:53:55.275  WARN 19266 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:53:55.275  WARN 19266 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:53:55.276  WARN 19266 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:53:55.434  INFO 19266 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 13:53:55.434  INFO 19266 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 13:53:55.434  INFO 19266 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 13:53:55.434  INFO 19266 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 13:53:55.598  INFO 19266 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 13:53:55.795  INFO 19266 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 13:53:56.153  INFO 19266 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 13:53:56.223  INFO 19266 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 13:53:56.224  INFO 19266 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 13:53:56.225  INFO 19266 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 13:53:56.297  INFO 19266 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#d84418a:0/SimpleConnection@42d7e8bc [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 45254]
+2020-07-12 13:53:56.399  INFO 19266 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 7.02 seconds (JVM running for 9.13)
+2020-07-12 13:53:57.185  INFO 19266 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 13:53:57.190  INFO 19266 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 13:53:57.381  INFO 19266 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 13:53:57.384  INFO 19266 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 13:53:57.386  INFO 19266 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 13:53:57.396  INFO 19266 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 13:53:57.409  INFO 19266 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 13:53:57.410  INFO 19266 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 13:53:57.411  INFO 19266 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 13:53:57.412  INFO 19266 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 13:53:57.413  INFO 19266 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 13:53:57.416  INFO 19266 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 13:53:57.485  INFO 19266 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 13:53:57.508  INFO 19266 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 13:54:57.442  WARN 19624 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/xzwb/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/home/xzwb/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-07-12 13:54:57.475  INFO 19624 --- [main] cc.yyf.book.BookApplicationTests         : Starting BookApplicationTests on xzwb with PID 19624 (started by xzwb in /home/xzwb/BuyBook)
+2020-07-12 13:54:57.477  INFO 19624 --- [main] cc.yyf.book.BookApplicationTests         : No active profile set, falling back to default profiles: default
+2020-07-12 13:54:58.769  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:54:58.771  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-07-12 13:54:58.793  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Elasticsearch repository interfaces.
+2020-07-12 13:54:58.801  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:54:58.801  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-07-12 13:54:58.805  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-07-12 13:54:58.838  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:54:58.839  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-07-12 13:54:58.848  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 JDBC repository interfaces.
+2020-07-12 13:54:58.862  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 13:54:58.864  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 13:54:58.880  INFO 19624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-07-12 13:55:01.753  INFO 19624 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-07-12 13:55:01.773  INFO 19624 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-07-12 13:55:01.773  INFO 19624 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2020-07-12 13:55:01.774  INFO 19624 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-07-12 13:55:01.775  INFO 19624 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-07-12 13:55:01.775  INFO 19624 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-07-12 13:55:01.775  INFO 19624 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2020-07-12 13:55:01.776  INFO 19624 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: cc.yyf.book.config.MyAdaptableJobFactory@6c6928c
+2020-07-12 13:55:02.286  WARN 19624 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:55:02.286  WARN 19624 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:55:02.286  WARN 19624 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:55:02.286  WARN 19624 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-07-12 13:55:02.471  INFO 19624 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2020-07-12 13:55:02.471  INFO 19624 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.6.2
+2020-07-12 13:55:02.471  INFO 19624 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.6.2
+2020-07-12 13:55:02.472  INFO 19624 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.6.2
+2020-07-12 13:55:02.678  INFO 19624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 13:55:02.945  INFO 19624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 13:55:03.342  INFO 19624 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-07-12 13:55:03.442  INFO 19624 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-07-12 13:55:03.444  INFO 19624 --- [main] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-07-12 13:55:03.449  INFO 19624 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-07-12 13:55:03.580  INFO 19624 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#37cfda1c:0/SimpleConnection@7320750c [delegate=amqp://xzwb@127.0.0.1:5672//vhost_mmr, localPort= 45324]
+2020-07-12 13:55:03.663  INFO 19624 --- [main] cc.yyf.book.BookApplicationTests         : Started BookApplicationTests in 6.807 seconds (JVM running for 8.461)
+2020-07-12 13:55:04.479  INFO 19624 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 13:55:04.494  INFO 19624 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 13:55:04.649  INFO 19624 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 13:55:04.650  INFO 19624 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-07-12 13:55:05.650  INFO 19624 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-07-12 13:55:05.657  INFO 19624 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-07-12 13:55:05.659  INFO 19624 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 13:55:05.660  INFO 19624 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2020-07-12 13:55:05.660  INFO 19624 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2020-07-12 13:55:05.660  INFO 19624 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+2020-07-12 13:55:05.660  INFO 19624 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+2020-07-12 13:55:05.663  INFO 19624 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+2020-07-12 13:55:05.692  INFO 19624 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 13:55:05.703  INFO 19624 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

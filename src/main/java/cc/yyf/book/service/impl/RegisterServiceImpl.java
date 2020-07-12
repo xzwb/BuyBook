@@ -15,6 +15,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
 import javax.security.auth.login.LoginException;
@@ -61,6 +62,7 @@ public class RegisterServiceImpl implements RegisterService {
      * @throws PublicKeyException
      * @throws cc.yyf.book.zfjw.exception.LoginException
      */
+    @Transactional
     @Override
     public Result register(Person person, String smsCode, String studentPassword, String src, Part part) throws LoginException, PublicKeyException, cc.yyf.book.zfjw.exception.LoginException {
         // 用户密码使用md5加密后保存到数据库

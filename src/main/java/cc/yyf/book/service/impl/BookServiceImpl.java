@@ -8,6 +8,7 @@ import cc.yyf.book.service.BookService;
 import cc.yyf.book.thread.SaveFileThread;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.Part;
 
@@ -24,6 +25,7 @@ public class BookServiceImpl implements BookService {
      * @param part
      * @return
      */
+    @Transactional
     @Override
     public Result release(Book book, String fileURI, Part part) {
         bookMapper.insertBook(book);

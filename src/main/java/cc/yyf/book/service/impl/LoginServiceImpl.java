@@ -21,6 +21,12 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     LoginMapper loginMapper;
 
+    /**
+     * 登录验证
+     * @param studentCode
+     * @param password
+     * @return
+     */
     @Override
     public Result login(String studentCode, String password) {
         // 密码是加密后存入数据库的

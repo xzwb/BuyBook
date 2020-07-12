@@ -3,12 +3,13 @@ package cc.yyf.book.pojo;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Data
-public class Book {
+public class Book implements Serializable {
     // 书籍名称
     @NotNull
     private String bookName;

@@ -5,10 +5,7 @@ import cc.yyf.book.pojo.Result;
 import cc.yyf.book.service.BookService;
 import cc.yyf.book.util.SnowFlake;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
@@ -42,5 +39,15 @@ public class BookController {
         // 图片储存路径
         String fileURI = request.getSession().getServletContext().getRealPath("/") + book.getBookSrc();
         return bookService.release(book, fileURI, part);
+    }
+
+    /**
+     * 根据书籍的id查询书籍信息
+     * @param bookId
+     * @return
+     */
+    @GetMapping("/u/search/book/{bookId}")
+    public Result searchBookByBookId(@PathVariable("bookId") int bookId) {
+        return null;
     }
 }

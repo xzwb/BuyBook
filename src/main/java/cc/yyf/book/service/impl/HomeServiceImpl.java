@@ -24,6 +24,11 @@ public class HomeServiceImpl implements HomeService {
         return Result.build(ResultStatusEnum.SUCCESS, personCache.getPerson(studentCode));
     }
 
+    /**
+     * 注销
+     * @param studentCode
+     * @return
+     */
     @Override
     public Result logout(String studentCode) {
         personCache.logout(studentCode);
