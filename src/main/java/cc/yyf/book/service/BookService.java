@@ -4,6 +4,8 @@ import cc.yyf.book.pojo.Book;
 import cc.yyf.book.pojo.Result;
 
 import javax.servlet.http.Part;
+import java.io.IOException;
+import java.text.ParseException;
 
 public interface BookService {
     /**
@@ -14,4 +16,11 @@ public interface BookService {
      * @return
      */
     Result release(Book book, String fileURI, Part part);
+
+    /**
+     * 根据书籍id定位到特定书籍
+     * @param bookId
+     * @return
+     */
+    Result selectBookById(int bookId) throws IOException, ParseException;
 }

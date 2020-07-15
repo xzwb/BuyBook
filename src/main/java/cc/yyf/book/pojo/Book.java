@@ -4,9 +4,9 @@ import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Data
 public class Book implements Serializable {
@@ -30,8 +30,34 @@ public class Book implements Serializable {
     private Date bookDate;
     // 书的价格
     @NotNull
-    private float price;
+    private Double price;
     // 库存
     @NotNull
     private int stock;
+
+    /**
+     * 构造者模式传入es上取出的map，构造成book对象
+     * @param map
+     * @return
+     */
+    public static Book build(Map<String, Object> map) throws ParseException {
+        Book book = new Book();
+        book.setBookSrc((String) map.get("bookSrc"));
+        // 字符串转化为时间日期类型
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String date = (String) map.get("bookDate");
+        book.setBookDate(simpleDateFormat.parse(date.substring(0, 10)));
+
+        book.setStudentCode((String) map.get("studentCode"));
+        book.setBookId((Integer) map.get("bookId"));
+        book.setBookName((String) map.get("bookName"));
+        book.setBookIntroduction((String) map.get("bookIntroduction"));
+        book.setPrice((Double)map.get("price"));
+        book.setUserName((String) map.get("userName"));
+        book.setStock((Integer) map.get("stock"));
+        String bookStyle = (String) map.get("bookStyle");
+        book.setBookStyle(Arrays.asList(bookStyle.split(",")));
+
+        return book;
+    }
 }

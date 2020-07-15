@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
 import javax.validation.Valid;
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.Date;
 
 @CrossOrigin
@@ -47,7 +49,7 @@ public class BookController {
      * @return
      */
     @GetMapping("/u/search/book/{bookId}")
-    public Result searchBookByBookId(@PathVariable("bookId") int bookId) {
-        return null;
+    public Result searchBookByBookId(@PathVariable("bookId") int bookId) throws IOException, ParseException {
+        return bookService.selectBookById(bookId);
     }
 }
