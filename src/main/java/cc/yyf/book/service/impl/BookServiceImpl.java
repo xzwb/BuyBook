@@ -6,6 +6,7 @@ import cc.yyf.book.pojo.Result;
 import cc.yyf.book.pojo.ResultStatusEnum;
 import cc.yyf.book.service.BookService;
 import cc.yyf.book.thread.SaveFileThread;
+import cc.yyf.book.util.ESIndex;
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.RequestOptions;
@@ -50,10 +51,17 @@ public class BookServiceImpl implements BookService {
      */
     @Override
     public Result selectBookById(int bookId) throws IOException, ParseException {
-        GetRequest getRequest = new GetRequest("book", bookId+"");
-        GetResponse getResponse = restHighLevelClient.get(getRequest, RequestOptions.DEFAULT);
-        Map<String, Object> map = getResponse.getSourceAsMap();
-        Book book = Book.build(map);
-        return Result.build(ResultStatusEnum.SUCCESS, book);
+        GetRequest getRequest = new GetRequest(ESIndex.es, bookId+"");
+
+        // 判断文档是否存在
+        if (restHighLevelClient.exists(getRequest, RequestOptions.DEFAULT)) {
+            GetResponse getResponse = restHighLevelClient.get(getRequest, RequestOptions.DEFAULT);
+            Map<String, Object> map = getResponse.getSourceAsMap();
+            Book book = Book.build(map);
+            return Result.build(ResultStatusEnum.SUCCESS, book);
+        }
+
+        // 输入的bookId无法找到书籍
+        return Result.build(ResultStatusEnum.DOC_NOT_FOUND);
     }
 }

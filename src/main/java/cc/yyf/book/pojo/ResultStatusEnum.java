@@ -12,9 +12,9 @@ public enum ResultStatusEnum {
     EXCEPTION(500, "服务器异常"),
 
     /**
-     * 短信验证码未能成功发出
+     * 文档查询失败
      */
-    SMS_CODE_FALSE(-2, "输入正确的手机号"),
+    DOC_NOT_FOUND(-2, "没有找到该书籍的文档"),
 
     /**
      * 传入的电话号码为空
