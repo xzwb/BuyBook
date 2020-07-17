@@ -1,6 +1,7 @@
 package cc.yyf.book.controller;
 
 import cc.yyf.book.pojo.Book;
+import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.service.BookService;
 import cc.yyf.book.util.SnowFlake;
@@ -51,5 +52,17 @@ public class BookController {
     @GetMapping("/u/search/book/{bookId}")
     public Result searchBookByBookId(@PathVariable("bookId") int bookId) throws IOException, ParseException {
         return bookService.selectBookById(bookId);
+    }
+
+    /**
+     * 获取所有的书籍
+     * @param page
+     * @return
+     */
+    @GetMapping("/u/search/books")
+    public Result searchAllBooks(@Valid @RequestBody Page page) throws IOException, ParseException {
+        int from = (page.getPage() - 1) * page.getSize();
+        int size = page.getSize();
+        return bookService.getAllBook(from, size);
     }
 }

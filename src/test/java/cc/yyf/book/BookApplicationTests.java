@@ -13,8 +13,10 @@ import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.client.indices.GetIndexRequest;
 import org.elasticsearch.common.unit.TimeValue;
+import org.elasticsearch.index.query.MatchAllQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.TermQueryBuilder;
+import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.fetch.subphase.FetchSourceContext;
@@ -77,17 +79,22 @@ class BookApplicationTests {
         SearchRequest request = new SearchRequest(ESIndex.es);
         // 构建搜索的条件
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+//        MatchAllQueryBuilder matchAllQueryBuilder = QueryBuilders.matchAllQuery();
+//        searchSourceBuilder.query(matchAllQueryBuilder);
         // 查询条件
-        TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("userName", "yyf");
-        searchSourceBuilder.query(termQueryBuilder);
+//        TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("userName", "yyf");
+//        searchSourceBuilder.query(termQueryBuilder);
         // 分页
-//        searchSourceBuilder.size();
-//        searchSourceBuilder.from();
+//        searchSourceBuilder.size(0);
+//        searchSourceBuilder.from(5);
         // 查询时间
-        searchSourceBuilder.timeout(new TimeValue(60, TimeUnit.SECONDS));
+//        searchSourceBuilder.timeout(new TimeValue(60, TimeUnit.SECONDS));
         request.source(searchSourceBuilder);
         SearchResponse search = restHighLevelClient.search(request, RequestOptions.DEFAULT);
-        SearchHits hits = search.getHits();
-        System.out.println(JSON.toJSONString(hits));
+//        SearchHits hits = search.getHits();
+//        System.out.println(JSON.toJSONString(hits));
+        for (SearchHit documentFields : search.getHits().getHits()) {
+            System.out.println(documentFields.getSourceAsMap());
+        }
     }
 }

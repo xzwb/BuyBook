@@ -35,4 +35,6 @@ public class HomeController {
         String studentCode = (String) request.getAttribute("studentCode");
         return homeService.logout(studentCode);
     }
+
+
 }

@@ -23,4 +23,12 @@ public interface BookService {
      * @return
      */
     Result selectBookById(int bookId) throws IOException, ParseException;
+
+    /**
+     * 获取所有的书籍信息 通过es
+     * @param from 起始位置
+     * @param size 每页的个数
+     * @return
+     */
+    Result getAllBook(int from, int size) throws IOException, ParseException;
 }
