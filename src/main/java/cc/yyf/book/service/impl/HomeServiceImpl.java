@@ -1,7 +1,10 @@
 package cc.yyf.book.service.impl;
 
 import cc.yyf.book.cache.PersonCache;
+import cc.yyf.book.mapper.BookMapper;
+import cc.yyf.book.mapper.HomeMapper;
 import cc.yyf.book.pojo.Book;
+import cc.yyf.book.pojo.BookUpdate;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.pojo.ResultStatusEnum;
 import cc.yyf.book.service.HomeService;
@@ -32,6 +35,9 @@ public class HomeServiceImpl implements HomeService {
 
     @Autowired
     RestHighLevelClient restHighLevelClient;
+
+    @Autowired
+    HomeMapper homeMapper;
 
 
     /**
@@ -80,5 +86,17 @@ public class HomeServiceImpl implements HomeService {
             books.add(Book.build(documentFields.getSourceAsMap()));
         }
         return Result.build(ResultStatusEnum.SUCCESS, books);
+    }
+
+    /**
+     * 修改已经发布的书籍信息
+     * @param studentCode
+     * @param book
+     * @return
+     */
+    @Override
+    public Result updateBook(String studentCode, BookUpdate book) {
+        homeMapper.updateBook(studentCode, book);
+        return Result.build(ResultStatusEnum.SUCCESS);
     }
 }

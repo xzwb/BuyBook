@@ -1,13 +1,11 @@
 package cc.yyf.book.controller;
 
+import cc.yyf.book.pojo.BookUpdate;
 import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.service.HomeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -52,5 +50,17 @@ public class HomeController {
         int size = page.getSize();
 
         return homeService.getOwnBook(studentCode, from, size);
+    }
+
+    /**
+     * 用户更新自己的书籍信息
+     * @param book
+     * @return
+     */
+    @PostMapping("/u/update/book")
+    public Result updateBook(@RequestBody BookUpdate book,
+                             HttpServletRequest request) {
+        String studentCode = (String) request.getAttribute("studentCode");
+        return homeService.updateBook(studentCode, book);
     }
 }

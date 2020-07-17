@@ -1,5 +1,6 @@
 package cc.yyf.book.service;
 
+import cc.yyf.book.pojo.BookUpdate;
 import cc.yyf.book.pojo.Result;
 
 import java.io.IOException;
@@ -29,4 +30,11 @@ public interface HomeService {
      */
     Result getOwnBook(String studentCode, int from, int size) throws IOException, ParseException;
 
+    /**
+     * 修改书籍的信息
+     * @param studentCode
+     * @param book
+     * @return
+     */
+    Result updateBook(String studentCode, BookUpdate book);
 }

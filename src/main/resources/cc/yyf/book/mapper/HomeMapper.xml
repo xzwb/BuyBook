@@ -7,4 +7,14 @@
     <select id="selectPersonByStudentCode" resultType="person">
         select *from user where studentCode = #{studentCode};
     </select>
+
+    <!-- 修改书籍信息 -->
+    <update id="updateBook">
+        update book set
+        bookName = #{book.bookName},
+        bookIntroduction = #{book.bookIntroduction},
+        price = #{book.price},
+        bookStyle = #{book.bookStyle, typeHandler = cc.yyf.book.typeHandler.MyTypeHandler}
+        where bookId = #{book.bookId} and studentCode = #{studentCode};
+    </update>
 </mapper>
