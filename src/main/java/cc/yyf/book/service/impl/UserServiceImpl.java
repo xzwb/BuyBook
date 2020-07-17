@@ -33,4 +33,15 @@ public class UserServiceImpl implements UserService {
         people = userMapper.selectPerson(from, page.getSize(), page.getMessage());
         return Result.build(ResultStatusEnum.SUCCESS, people);
     }
+
+    /**
+     * 查询用户根据学号
+     * @param studentCode
+     * @return
+     */
+    @Override
+    public Result selectUser(String studentCode) {
+        Person person = userMapper.getPersonByStudentCode(studentCode);
+        return Result.build(ResultStatusEnum.SUCCESS, person);
+    }
 }

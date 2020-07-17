@@ -10,4 +10,9 @@
         where studentCode = #{message} or userName like concat('%', #{message}, '%')
         limit #{from}, #{size};
     </select>
+
+    <!-- 根据学号查询用户 -->
+    <select id="getPersonByStudentCode" resultType="person">
+        select *from user where studentCode = #{studentCode};
+    </select>
 </mapper>
