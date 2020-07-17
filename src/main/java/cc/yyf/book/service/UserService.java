@@ -3,6 +3,9 @@ package cc.yyf.book.service;
 import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.Result;
 
+import java.io.IOException;
+import java.text.ParseException;
+
 public interface UserService {
 
     /**
@@ -18,4 +21,13 @@ public interface UserService {
      * @return
      */
     Result selectUser(String studentCode);
+
+    /**
+     * 获取该学号用户发布的书籍信息
+     * @param studentCode
+     * @param from
+     * @param size
+     * @return
+     */
+    Result usersBook(String studentCode, int from, int size) throws ParseException, IOException;
 }

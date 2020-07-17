@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.IOException;
+import java.text.ParseException;
 
 @RestController
 @CrossOrigin
@@ -33,5 +35,17 @@ public class UserController {
     @GetMapping("/u/select/user/{studentCode}")
     public Result selectUser(@PathVariable("studentCode") String studentCode) {
         return userService.selectUser(studentCode);
+    }
+
+    /**
+     * 根据学号获取该学号用户发布的书籍信息
+     * @return
+     */
+    @GetMapping("/u/book/user")
+    public Result getBookByUser(@Valid @RequestBody Page page) throws IOException, ParseException {
+        int from = (page.getPage() - 1) * page.getSize();
+        int size = page.getSize();
+        String studentCode = page.getMessage();
+        return userService.usersBook(studentCode, from, size);
     }
 }
