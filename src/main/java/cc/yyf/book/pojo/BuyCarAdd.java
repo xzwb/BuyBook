@@ -12,9 +12,9 @@ import java.util.Date;
 @Alias("buyCarAdd")
 public class BuyCarAdd {
     // 要添加到购物车的书籍编号
-    int bookId;
+    private int bookId;
     // 买家的学号
-    String studentCode;
+    private String studentCode;
     // 添加的时间
-    Date addTime;
+    private Date addTime;
 }

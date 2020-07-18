@@ -1,13 +1,14 @@
 package cc.yyf.book.service.impl;
 
 import cc.yyf.book.mapper.OrderMapper;
-import cc.yyf.book.pojo.BuyCarAdd;
-import cc.yyf.book.pojo.Result;
-import cc.yyf.book.pojo.ResultStatusEnum;
+import cc.yyf.book.pojo.*;
 import cc.yyf.book.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -25,5 +26,21 @@ public class OrderServiceImpl implements OrderService {
     public Result addBuyCar(BuyCarAdd buyCarAdd) {
         orderMapper.insertBuyCar(buyCarAdd);
         return Result.build(ResultStatusEnum.SUCCESS);
+    }
+
+    /**
+     * 获取购物车中的内容
+     * @param page
+     * @param studentCode
+     * @return
+     */
+    @Override
+    @Transactional
+    public Result searchBuyCar(Page page, String studentCode) {
+        int from = (page.getPage() - 1) * page.getSize();
+        int size = page.getSize();
+        List<BuyCarSelect> list = new ArrayList<>();
+        list = orderMapper.searchBuyCar(from, size, studentCode);
+        return Result.build(ResultStatusEnum.SUCCESS, list);
     }
 }

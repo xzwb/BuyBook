@@ -10,11 +10,11 @@ import javax.validation.constraints.NotNull;
 @Data
 public class Page {
     // 查询条件
-    String message;
+    private String message;
     // 页数
     @NotNull
-    public int page;
+    private int page;
     // 每页个数
     @NotNull
-    public int size;
+    private int size;
 }

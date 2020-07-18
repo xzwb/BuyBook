@@ -4,8 +4,40 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cc.yyf.book.mapper.OrderMapper">
+    <!-- 查询购物车内容时用到的映射关系 -->
+    <resultMap id="searchBuyCar" type="buyCarSelect">
+        <id property="buyCarId" column="buyCarId"/>
+        <result property="addTime" column="addTime"/>
+        <association property="book" javaType="cc.yyf.book.pojo.Book">
+            <id property="bookId" column="bookId"/>
+            <result property="bookName" column="bookName"/>
+            <result property="studentCode" column="studentCode"/>
+            <result property="userName" column="userName"/>
+            <result property="bookStyle" column="bookStyle" typeHandler="cc.yyf.book.typeHandler.MyTypeHandler"/>
+            <result property="bookIntroduction" column="bookIntroduction"/>
+            <result property="bookSrc" column="bookSrc"/>
+            <result property="bookDate" column="bookDate"/>
+            <result property="price" column="price"/>
+            <result property="stock" column="stock"/>
+        </association>
+    </resultMap>
+
+    <!-- 添加书籍到购物车 -->
     <insert id="insertBuyCar" parameterType="buyCarAdd">
         insert into buyCar values(default, #{bookId}, #{studentCode}, #{addTime});
     </insert>
+
+    <!-- 查询购物车 -->
+    <select id="searchBuyCar" resultMap="searchBuyCar">
+        select b.addTime, b.buyCarId, book.*, u.userName
+        from buyCar b
+        left join book
+        on b.bookId = book.bookId
+        left join user u
+        on u.studentCode = book.studentCode
+        where b.studentCode = #{studentCode}
+        order by addTime desc
+        limit #{from}, #{size};
+    </select>
 
 </mapper>

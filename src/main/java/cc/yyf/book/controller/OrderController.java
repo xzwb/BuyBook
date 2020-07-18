@@ -1,13 +1,12 @@
 package cc.yyf.book.controller;
 
 import cc.yyf.book.pojo.BuyCarAdd;
+import cc.yyf.book.pojo.BuyCarSelect;
+import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
@@ -26,5 +25,19 @@ public class OrderController {
         buyCarAdd.setAddTime(new Date());
         buyCarAdd.setStudentCode(studentCode);
         return orderService.addBuyCar(buyCarAdd);
+    }
+
+    /**
+     * 获取自己购物车的内容
+     * @param page
+     * @param request
+     * @return
+     */
+    @GetMapping("/u/search/buyCar")
+    public Result searchCar(@RequestBody Page page,
+                            HttpServletRequest request) {
+        String studentCode = (String) request.getAttribute("studentCode");
+        return orderService.searchBuyCar(page, studentCode);
+
     }
 }
