@@ -1,7 +1,6 @@
 package cc.yyf.book.controller;
 
 import cc.yyf.book.pojo.BuyCarAdd;
-import cc.yyf.book.pojo.BuyCarSelect;
 import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.service.OrderService;
@@ -38,6 +37,5 @@ public class OrderController {
                             HttpServletRequest request) {
         String studentCode = (String) request.getAttribute("studentCode");
         return orderService.searchBuyCar(page, studentCode);
-
     }
 }

@@ -22,7 +22,12 @@ public enum  OrderStatus {
     /**
      * 已过期
      */
-    END_TIME(4, "已过期");
+    END_TIME(4, "已过期"),
+
+    /**
+     * 订单已完成
+     */
+    OK(5, "已完成");
 
     int status;
 
