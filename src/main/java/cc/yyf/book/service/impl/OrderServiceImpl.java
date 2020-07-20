@@ -43,4 +43,17 @@ public class OrderServiceImpl implements OrderService {
         list = orderMapper.searchBuyCar(from, size, studentCode);
         return Result.build(ResultStatusEnum.SUCCESS, list);
     }
+
+    /**
+     * 从购物车中删除一件商品
+     * @param studentCode 学号
+     * @param buyCarId 购物车中商品的编号
+     * @return
+     */
+    @Transactional
+    @Override
+    public Result deleteBuyCar(String studentCode, int buyCarId) {
+        orderMapper.deleteBuyCar(studentCode, buyCarId);
+        return Result.build(ResultStatusEnum.SUCCESS);
+    }
 }

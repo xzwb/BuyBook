@@ -27,4 +27,12 @@ public interface OrderMapper {
     List<BuyCarSelect> searchBuyCar(@Param("from")int from,
                                     @Param("size")int size,
                                     @Param("studentCode") String studentCode);
+
+    /**
+     * 删除购物车中的一件商品
+     * @param studentCode 学号
+     * @param buyCarId 购物车中商品的编号
+     */
+    void deleteBuyCar(@Param("studentCode")String studentCode,
+                      @Param("buyCarId") int buyCarId);
 }

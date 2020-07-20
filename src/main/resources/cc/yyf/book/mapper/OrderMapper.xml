@@ -40,4 +40,9 @@
         limit #{from}, #{size};
     </select>
 
+    <!-- 删除购物车中的一件商品 -->
+    <delete id="deleteBuyCar">
+        delete from buyCar where buyCarId = #{buyCarId} and studentCode = #{studentCode}
+    </delete>
+
 </mapper>

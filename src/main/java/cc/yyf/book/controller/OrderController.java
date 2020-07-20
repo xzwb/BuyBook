@@ -38,4 +38,17 @@ public class OrderController {
         String studentCode = (String) request.getAttribute("studentCode");
         return orderService.searchBuyCar(page, studentCode);
     }
+
+    /**
+     * 删除购物车中的商品(一件)
+     * @param buyCarId
+     * @param request
+     * @return
+     */
+    @PostMapping("/u/delete/buyCar/{buyCarId}")
+    public Result deleteBuyCar(@PathVariable("buyCarId") int buyCarId,
+                               HttpServletRequest request) {
+        String studentCode = (String) request.getAttribute("studentCode");
+        return orderService.deleteBuyCar(studentCode, buyCarId);
+    }
 }

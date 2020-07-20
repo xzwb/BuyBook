@@ -19,4 +19,12 @@ public interface OrderService {
      * @return
      */
     Result searchBuyCar(Page page, String studentCode);
+
+    /**
+     * 删除购物车中的一件商品
+     * @param studentCode 学号
+     * @param buyCarId 购物车中商品的编号
+     * @return
+     */
+    Result deleteBuyCar(String studentCode, int buyCarId);
 }
