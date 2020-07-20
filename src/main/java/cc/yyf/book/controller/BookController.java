@@ -65,4 +65,19 @@ public class BookController {
         int size = page.getSize();
         return bookService.getAllBook(from, size);
     }
+
+
+    /**
+     * 对书籍进行模糊搜索
+     * @param page
+     * @return
+     */
+    @GetMapping("/u/search/some/book")
+    public Result searchBook(@Valid @RequestBody Page page) throws IOException, ParseException {
+        String message = page.getMessage();
+        int from = (page.getPage() - 1) * page.getSize();
+        int size = page.getSize();
+        return bookService.searchBook(message, from, size);
+    }
+
 }

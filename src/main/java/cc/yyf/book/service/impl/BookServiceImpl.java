@@ -13,8 +13,12 @@ import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.text.Text;
+import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.elasticsearch.search.sort.FieldSortBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -94,6 +98,49 @@ public class BookServiceImpl implements BookService {
             books.add(Book.build(documentFields.getSourceAsMap()));
         }
 
+        return Result.build(ResultStatusEnum.SUCCESS, books);
+    }
+
+    /**
+     * 模糊搜索书籍
+     * @param message 搜索条件
+     * @param from
+     * @param size
+     * @return
+     */
+    @Override
+    public Result searchBook(String message, int from, int size) throws IOException, ParseException {
+        SearchRequest request = new SearchRequest(ESIndex.es);
+        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+        searchSourceBuilder.from(from);
+        searchSourceBuilder.size(size);
+        MatchQueryBuilder matchQueryBuilder = new MatchQueryBuilder("bookName", message);
+        searchSourceBuilder.query(matchQueryBuilder);
+        // 高亮
+        HighlightBuilder highlightBuilder = new HighlightBuilder();
+        highlightBuilder.field("bookName");
+        highlightBuilder.preTags("<span style='color:red'>");
+        highlightBuilder.postTags("</span>");
+        searchSourceBuilder.highlighter(highlightBuilder);
+        // 执行搜索
+        request.source(searchSourceBuilder);
+        SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
+        List<Book> books = new ArrayList<>();
+        for (SearchHit documentFields : response.getHits().getHits()) {
+            // 解析高亮字段并替换
+            Map<String, HighlightField> highlightFieldMap = documentFields.getHighlightFields();
+            HighlightField bookName = highlightFieldMap.get("bookName");
+            Map<String, Object> map = documentFields.getSourceAsMap();
+            if (bookName != null) {
+                Text[] fragments = bookName.fragments();
+                String s = "";
+                for (Text text : fragments) {
+                    s += text;
+                }
+                map.put("bookName", s);
+            }
+            books.add(Book.build(map));
+        }
         return Result.build(ResultStatusEnum.SUCCESS, books);
     }
 }
