@@ -40,4 +40,13 @@ public interface BookService {
      * @return
      */
     Result searchBook(String message, int from, int size) throws IOException, ParseException;
+
+    /**
+     * 根据书籍类型搜索
+     * @param message
+     * @param from
+     * @param size
+     * @return
+     */
+    Result styleBook(String message, int from, int size) throws IOException, ParseException;
 }

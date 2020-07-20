@@ -15,6 +15,8 @@ import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.text.Text;
 import org.elasticsearch.index.query.MatchQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.TermQueryBuilder;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
@@ -139,6 +141,32 @@ public class BookServiceImpl implements BookService {
                 }
                 map.put("bookName", s);
             }
+            books.add(Book.build(map));
+        }
+        return Result.build(ResultStatusEnum.SUCCESS, books);
+    }
+
+    /**
+     * 按类型搜索
+     * @param message 类型
+     * @param from
+     * @param size
+     * @return
+     */
+    @Override
+    public Result styleBook(String message, int from, int size) throws IOException, ParseException {
+        List<Book> books = new ArrayList<>();
+        SearchRequest request = new SearchRequest(ESIndex.es);
+        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+        MatchQueryBuilder matchQueryBuilder = new MatchQueryBuilder("bookStyle", message);
+        searchSourceBuilder.query(matchQueryBuilder);
+        // 分页
+        searchSourceBuilder.size(size);
+        searchSourceBuilder.from(from);
+        request.source(searchSourceBuilder);
+        SearchResponse response = restHighLevelClient.search(request, RequestOptions.DEFAULT);
+        for (SearchHit documentFields : response.getHits().getHits()) {
+            Map<String, Object> map = documentFields.getSourceAsMap();
             books.add(Book.build(map));
         }
         return Result.build(ResultStatusEnum.SUCCESS, books);
