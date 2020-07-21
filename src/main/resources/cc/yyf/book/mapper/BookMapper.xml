@@ -10,4 +10,29 @@
         #{bookStyle, typeHandler = cc.yyf.book.typeHandler.MyTypeHandler},
         #{bookIntroduction}, #{bookSrc}, #{bookDate}, #{price}, #{stock});
     </insert>
+
+    <!-- 库存减一 -->
+    <update id="supStock">
+        update book set stock = stock -1 where bookId = #{bookId};
+    </update>
+
+    <!-- 库存加一 -->
+    <update id="addStock">
+        update book set stock = stock + 1 where bookId = #{bookId};
+    </update>
+
+    <!-- 获取存货信息 -->
+    <select id="getStock" resultType="int">
+        select stock from book where bookId = #{bookId};
+    </select>
+
+    <!-- 查询已过期订单的书籍编 -->
+    <select id="selectInvalidOrder" resultType="int">
+        select bookId from userOrder where orderStatus = #{status, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler} and orderEndTime &lt; #{time};
+    </select>
+
+    <!-- 取消过期订单 -->
+    <update id="orderJobMapper">
+        update userOrder set orderStatus = #{newStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler} where orderStatus = #{oldStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler} and orderEndTime &lt; #{time};
+    </update>
 </mapper>

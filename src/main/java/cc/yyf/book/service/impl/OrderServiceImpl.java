@@ -1,10 +1,13 @@
 package cc.yyf.book.service.impl;
 
+import cc.yyf.book.mapper.BookMapper;
 import cc.yyf.book.mapper.OrderMapper;
 import cc.yyf.book.pojo.*;
 import cc.yyf.book.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
@@ -15,6 +18,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     OrderMapper orderMapper;
+
+    @Autowired
+    BookMapper bookMapper;
 
     /**
      * 添加商品到购物车
@@ -55,5 +61,34 @@ public class OrderServiceImpl implements OrderService {
     public Result deleteBuyCar(String studentCode, int buyCarId) {
         orderMapper.deleteBuyCar(studentCode, buyCarId);
         return Result.build(ResultStatusEnum.SUCCESS);
+    }
+
+    /**
+     * 保存订单
+     * @param userOrder
+     * @return
+     */
+    @Override
+    @Transactional
+    public Result saveBookOrder(UserOrder userOrder) {
+        // 查查库存
+        if (haveBook(userOrder.getBookId())) {
+            orderMapper.insertBookOrder(userOrder);
+            bookMapper.supStock(userOrder.getBookId());
+            return Result.build(ResultStatusEnum.SUCCESS);
+        }
+        return Result.build(ResultStatusEnum.NOT_HAVE_STOCK);
+    }
+
+    /**
+     * 检测是否有货
+     */
+    @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
+    public boolean haveBook(int bookId) {
+        int stock = bookMapper.getStock(bookId);
+        if (stock > 0) {
+            return true;
+        }
+        return false;
     }
 }

@@ -1,8 +1,6 @@
 package cc.yyf.book.controller;
 
-import cc.yyf.book.pojo.BuyCarAdd;
-import cc.yyf.book.pojo.Page;
-import cc.yyf.book.pojo.Result;
+import cc.yyf.book.pojo.*;
 import cc.yyf.book.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -50,5 +48,22 @@ public class OrderController {
                                HttpServletRequest request) {
         String studentCode = (String) request.getAttribute("studentCode");
         return orderService.deleteBuyCar(studentCode, buyCarId);
+    }
+
+    /**
+     * 从商品主页保存订单
+     * @param bookId
+     * @param request
+     * @return
+     */
+    @PostMapping("/u/save/order/{bookId}")
+    public Result buyBook(@PathVariable("bookId") int bookId,
+                          HttpServletRequest request) {
+        Date buyDate = new Date();
+        String studentCode = (String) request.getAttribute("studentCode");
+        // 设置订单过期时间15分钟
+        Date orderEndTime = new Date(buyDate.getTime() + 15*1000*60);
+        UserOrder userOrder = UserOrder.build(studentCode, bookId, buyDate, OrderStatus.WAIT_PAY, orderEndTime);
+        return orderService.saveBookOrder(userOrder);
     }
 }

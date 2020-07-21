@@ -45,4 +45,10 @@
         delete from buyCar where buyCarId = #{buyCarId} and studentCode = #{studentCode}
     </delete>
 
+    <!-- 添加订单 -->
+    <insert id="insertBookOrder" parameterType="userOrder">
+         insert into userOrder values(default, #{studentCode},
+        #{bookId}, #{buyDate},
+        #{orderStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler}, #{orderEndTime});
+    </insert>
 </mapper>

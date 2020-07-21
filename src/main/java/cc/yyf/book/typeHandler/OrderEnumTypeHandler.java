@@ -29,8 +29,10 @@ public class OrderEnumTypeHandler implements TypeHandler<OrderStatus> {
             return OrderStatus.SUCCESS_PAY;
         } else if (status == 3) {
             return OrderStatus.CANCEL;
-        } else {
+        } else if (status == 4) {
             return OrderStatus.END_TIME;
+        } else {
+            return OrderStatus.OK;
         }
     }
 
@@ -43,8 +45,10 @@ public class OrderEnumTypeHandler implements TypeHandler<OrderStatus> {
             return OrderStatus.SUCCESS_PAY;
         } else if (status == 3) {
             return OrderStatus.CANCEL;
-        } else {
+        } else if (status == 4) {
             return OrderStatus.END_TIME;
+        } else {
+            return OrderStatus.OK;
         }
     }
 
@@ -57,8 +61,10 @@ public class OrderEnumTypeHandler implements TypeHandler<OrderStatus> {
             return OrderStatus.SUCCESS_PAY;
         } else if (status == 3) {
             return OrderStatus.CANCEL;
-        } else {
+        } else if (status == 4) {
             return OrderStatus.END_TIME;
+        } else {
+            return OrderStatus.OK;
         }
     }
 }

@@ -3,6 +3,7 @@ package cc.yyf.book.mapper;
 import cc.yyf.book.pojo.BuyCarAdd;
 import cc.yyf.book.pojo.BuyCarSelect;
 import cc.yyf.book.pojo.Page;
+import cc.yyf.book.pojo.UserOrder;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -35,4 +36,10 @@ public interface OrderMapper {
      */
     void deleteBuyCar(@Param("studentCode")String studentCode,
                       @Param("buyCarId") int buyCarId);
+
+
+    /**
+     * 添加订单
+     */
+    void insertBookOrder(UserOrder userOrder);
 }

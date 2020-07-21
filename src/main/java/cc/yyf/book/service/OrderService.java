@@ -3,6 +3,7 @@ package cc.yyf.book.service;
 import cc.yyf.book.pojo.BuyCarAdd;
 import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.Result;
+import cc.yyf.book.pojo.UserOrder;
 
 public interface OrderService {
     /**
@@ -27,4 +28,11 @@ public interface OrderService {
      * @return
      */
     Result deleteBuyCar(String studentCode, int buyCarId);
+
+    /**
+     * 保存订单
+     * @param userOrder
+     * @return
+     */
+    Result saveBookOrder(UserOrder userOrder);
 }
