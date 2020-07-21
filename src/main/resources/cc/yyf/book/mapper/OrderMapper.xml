@@ -98,4 +98,11 @@
         order by o.buyDate desc
         limit #{from}, #{size};
     </select>
+
+    <!-- 用户直接从商品主页付款 -->
+    <insert id="buyBook" parameterType="userOrder">
+        insert into userOrder
+        values(default, #{studentCode}, #{bookId}, #{buyDate},
+        #{orderStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler}, default);
+    </insert>
 </mapper>

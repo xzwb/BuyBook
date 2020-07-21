@@ -67,4 +67,10 @@ public interface OrderMapper {
                                 @Param("status") int status,
                                 @Param("from") int from,
                                 @Param("size") int size);
+
+    /**
+     * 直接从商品主页付款
+     * @param userOrder
+     */
+    void buyBook(UserOrder userOrder);
 }

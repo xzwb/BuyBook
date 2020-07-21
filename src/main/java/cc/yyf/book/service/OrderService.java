@@ -54,4 +54,11 @@ public interface OrderService {
      * @return
      */
     Result searchOrderByStyle(String studentCode, int status, int from, int size);
+
+    /**
+     * 用户直接从商品主页购买
+     * @param userOrder
+     * @return
+     */
+    Result buyBook(UserOrder userOrder);
 }

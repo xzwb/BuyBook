@@ -99,4 +99,13 @@ public class OrderController {
         String studentCode = (String) request.getAttribute("studentCode");
         return orderService.searchOrderByStyle(studentCode, orderStatus, from, size);
     }
+
+    @PostMapping("/u/buy/book/{bookId}")
+    public Result buyBookPay(@PathVariable("bookId") int bookId,
+                          HttpServletRequest request) {
+        String studentCode = (String) request.getAttribute("studentCode");
+        Date date = new Date();
+        UserOrder userOrder = UserOrder.build(studentCode, bookId, date, OrderStatus.SUCCESS_PAY, null);
+        return orderService.buyBook(userOrder);
+    }
 }

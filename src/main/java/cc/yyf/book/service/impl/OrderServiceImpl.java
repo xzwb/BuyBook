@@ -110,6 +110,18 @@ public class OrderServiceImpl implements OrderService {
     }
 
     /**
+     * 用户直接从商品主页付款
+     * @param userOrder
+     * @return
+     */
+    @Override
+    @Transactional
+    public Result buyBook(UserOrder userOrder) {
+        orderMapper.buyBook(userOrder);
+        return Result.build(ResultStatusEnum.SUCCESS);
+    }
+
+    /**
      * 检测是否有货
      */
     @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
