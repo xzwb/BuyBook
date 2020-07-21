@@ -6,6 +6,7 @@ import cc.yyf.book.pojo.Result;
 import cc.yyf.book.pojo.ResultStatusEnum;
 import cc.yyf.book.service.BookService;
 import cc.yyf.book.thread.SaveFileThread;
+import cc.yyf.book.util.BookCount;
 import cc.yyf.book.util.ESIndex;
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
@@ -24,6 +25,7 @@ import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.elasticsearch.search.sort.FieldSortBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,6 +33,7 @@ import javax.servlet.http.Part;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -42,6 +45,9 @@ public class BookServiceImpl implements BookService {
 
     @Autowired
     RestHighLevelClient restHighLevelClient;
+
+    @Autowired
+    RedisTemplate redisTemplate;
 
     /**
      * 用户发布书籍的service层
@@ -61,14 +67,18 @@ public class BookServiceImpl implements BookService {
     /**
      * 根据书籍id定位到特定书籍
      * @param bookId
+     * @param studentCode
      * @return
      */
     @Override
-    public Result selectBookById(int bookId) throws IOException, ParseException {
+    public Result selectBookById(int bookId, String studentCode) throws IOException, ParseException {
         GetRequest getRequest = new GetRequest(ESIndex.es, bookId+"");
 
         // 判断文档是否存在
         if (restHighLevelClient.exists(getRequest, RequestOptions.DEFAULT)) {
+            // 访问量加一
+            redisTemplate.opsForHyperLogLog().add(BookCount.count+bookId, studentCode);
+
             GetResponse getResponse = restHighLevelClient.get(getRequest, RequestOptions.DEFAULT);
             Map<String, Object> map = getResponse.getSourceAsMap();
             Book book = Book.build(map);
@@ -170,5 +180,18 @@ public class BookServiceImpl implements BookService {
             books.add(Book.build(map));
         }
         return Result.build(ResultStatusEnum.SUCCESS, books);
+    }
+
+    /**
+     * 获取书籍的访问量
+     * @param bookId
+     * @return
+     */
+    @Override
+    public Result countBook(int bookId) {
+        Long size = redisTemplate.opsForHyperLogLog().size(BookCount.count + bookId);
+        Map<String, Long> map = new HashMap<>();
+        map.put("count", size);
+        return Result.build(ResultStatusEnum.SUCCESS, map);
     }
 }

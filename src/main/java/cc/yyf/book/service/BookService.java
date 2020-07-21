@@ -20,9 +20,10 @@ public interface BookService {
     /**
      * 根据书籍id定位到特定书籍
      * @param bookId
+     * @param studentCode
      * @return
      */
-    Result selectBookById(int bookId) throws IOException, ParseException;
+    Result selectBookById(int bookId, String studentCode) throws IOException, ParseException;
 
     /**
      * 获取所有的书籍信息 通过es
@@ -49,4 +50,11 @@ public interface BookService {
      * @return
      */
     Result styleBook(String message, int from, int size) throws IOException, ParseException;
+
+    /**
+     * 查看书籍的访问量
+     * @param bookId
+     * @return
+     */
+    Result countBook(int bookId);
 }

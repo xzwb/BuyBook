@@ -50,8 +50,10 @@ public class BookController {
      * @return
      */
     @GetMapping("/u/search/book/{bookId}")
-    public Result searchBookByBookId(@PathVariable("bookId") int bookId) throws IOException, ParseException {
-        return bookService.selectBookById(bookId);
+    public Result searchBookByBookId(@PathVariable("bookId") int bookId,
+                                     HttpServletRequest request) throws IOException, ParseException {
+        String studentCode = (String) request.getAttribute("studentCode");
+        return bookService.selectBookById(bookId, studentCode);
     }
 
     /**
@@ -91,6 +93,16 @@ public class BookController {
         int from = (page.getPage() - 1) * page.getSize();
         int size = page.getSize();
         return bookService.styleBook(message, from, size);
+    }
+
+    /**
+     * 获取每一本书的用户访问量
+     * @param bookId
+     * @return
+     */
+    @GetMapping("/u/count/{bookId}")
+    public Result countBook(@PathVariable("bookId") int bookId) {
+        return bookService.countBook(bookId);
     }
 
 }
