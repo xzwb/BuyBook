@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.util.Date;
 
 @RestController
@@ -65,5 +66,20 @@ public class OrderController {
         Date orderEndTime = new Date(buyDate.getTime() + 15*1000*60);
         UserOrder userOrder = UserOrder.build(studentCode, bookId, buyDate, OrderStatus.WAIT_PAY, orderEndTime);
         return orderService.saveBookOrder(userOrder);
+    }
+
+    /**
+     * 获取用户自己所有订单信息
+     * @param page
+     * @param request
+     * @return
+     */
+    @GetMapping("/u/search/order")
+    public Result searchOrder(@Valid @RequestBody Page page,
+                              HttpServletRequest request) {
+        String studentCode = (String) request.getAttribute("studentCode");
+        int from = (page.getPage() - 1) * page.getSize();
+        int size = page.getSize();
+        return orderService.searchOrder(studentCode, from, size);
     }
 }

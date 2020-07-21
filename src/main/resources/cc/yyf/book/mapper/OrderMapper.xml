@@ -22,6 +22,27 @@
         </association>
     </resultMap>
 
+    <!-- 查询订单时用到的映射关系 -->
+    <resultMap id="userOrder" type="userOrder">
+        <id property="orderId" column="orderId"/>
+        <result property="studentCode" column="buyer"/>
+        <result property="bookId" column="bookId"/>
+        <result property="buyDate" column="buyDate"/>
+        <result property="orderStatus" column="orderStatus" typeHandler="cc.yyf.book.typeHandler.OrderEnumTypeHandler"/>
+        <association property="book" javaType="cc.yyf.book.pojo.Book">
+            <id property="bookId" column="bookId"/>
+            <result property="studentCode" column="studentCode"/>
+            <result property="bookName" column="bookName"/>
+            <result property="stock" column="stock"/>
+            <result property="bookStyle" column="bookStyle" typeHandler="cc.yyf.book.typeHandler.MyTypeHandler"/>
+            <result property="bookIntroduction" column="bookIntroduction"/>
+            <result property="bookSrc" column="bookSrc"/>
+            <result property="userName" column="userName"/>
+            <result property="bookDate" column="bookDate"/>
+            <result property="price" column="price"/>
+        </association>
+    </resultMap>
+
     <!-- 添加书籍到购物车 -->
     <insert id="insertBuyCar" parameterType="buyCarAdd">
         insert into buyCar values(default, #{bookId}, #{studentCode}, #{addTime});
@@ -51,4 +72,17 @@
         #{bookId}, #{buyDate},
         #{orderStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler}, #{orderEndTime});
     </insert>
+
+    <!-- 获取订单 -->
+    <select id="searchOrder" resultMap="userOrder">
+        select b.*, u.userName, o.studentCode buyer, o.orderId, o.buyDate, o.orderStatus, o.bookId
+        from userOrder o
+        left join book b
+        on o.bookId = b.bookId
+        left join user u
+        on b.studentCode = u.studentCode
+        where o.studentCode = #{studentCode}
+        order by o.buyDate desc
+        limit #{from}, #{size};
+    </select>
 </mapper>

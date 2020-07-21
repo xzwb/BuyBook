@@ -35,4 +35,13 @@ public interface OrderService {
      * @return
      */
     Result saveBookOrder(UserOrder userOrder);
+
+    /**
+     * 查看所有的订单
+     * @param studentCode
+     * @param from
+     * @param page
+     * @return
+     */
+    Result searchOrder(String studentCode, int from, int page);
 }

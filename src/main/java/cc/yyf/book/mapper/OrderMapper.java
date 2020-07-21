@@ -42,4 +42,15 @@ public interface OrderMapper {
      * 添加订单
      */
     void insertBookOrder(UserOrder userOrder);
+
+    /**
+     * 获取订单信息
+     * @param studentCode
+     * @param from
+     * @param size
+     * @return
+     */
+    List<UserOrder> searchOrder(@Param("studentCode") String studentCode,
+                                @Param("from") int from,
+                                @Param("size") int size);
 }
