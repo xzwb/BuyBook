@@ -6,6 +6,7 @@ import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.UserOrder;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -51,6 +52,19 @@ public interface OrderMapper {
      * @return
      */
     List<UserOrder> searchOrder(@Param("studentCode") String studentCode,
+                                @Param("from") int from,
+                                @Param("size") int size);
+
+    /**
+     * 根据订单类别查看订单
+     * @param studentCode
+     * @param status
+     * @param from
+     * @param size
+     * @return
+     */
+    List<UserOrder> searchOrderByStyle(@Param("studentCode") String studentCode,
+                                @Param("status") int status,
                                 @Param("from") int from,
                                 @Param("size") int size);
 }

@@ -44,4 +44,14 @@ public interface OrderService {
      * @return
      */
     Result searchOrder(String studentCode, int from, int page);
+
+    /**
+     * 按照订单类别查询
+     * @param studentCode
+     * @param status
+     * @param from
+     * @param size
+     * @return
+     */
+    Result searchOrderByStyle(String studentCode, int status, int from, int size);
 }

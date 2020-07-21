@@ -82,4 +82,21 @@ public class OrderController {
         int size = page.getSize();
         return orderService.searchOrder(studentCode, from, size);
     }
+
+
+    /**
+     * 按照订单条件查看订单
+     * @param page
+     * @param request
+     * @return
+     */
+    @GetMapping("/u/search/order/style")
+    public Result searchOrders(@Valid @RequestBody Page page,
+                               HttpServletRequest request) {
+        int orderStatus = Integer.parseInt(page.getMessage());
+        int from = (page.getPage() - 1) * page.getSize();
+        int size = page.getSize();
+        String studentCode = (String) request.getAttribute("studentCode");
+        return orderService.searchOrderByStyle(studentCode, orderStatus, from, size);
+    }
 }

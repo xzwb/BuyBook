@@ -95,6 +95,21 @@ public class OrderServiceImpl implements OrderService {
     }
 
     /**
+     * 按照订单类别查询
+     * @param studentCode
+     * @param status
+     * @param from
+     * @param size
+     * @return
+     */
+    @Override
+    public Result searchOrderByStyle(String studentCode, int status, int from, int size) {
+        List<UserOrder> list = new ArrayList<>();
+        list = orderMapper.searchOrderByStyle(studentCode, status, from, size);
+        return Result.build(ResultStatusEnum.SUCCESS, list);
+    }
+
+    /**
      * 检测是否有货
      */
     @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)

@@ -85,4 +85,17 @@
         order by o.buyDate desc
         limit #{from}, #{size};
     </select>
+
+    <!-- 根据订单类别获取订单 -->
+    <select id="searchOrderByStyle" resultMap="userOrder">
+        select b.*, u.userName, o.studentCode buyer, o.orderId, o.buyDate, o.orderStatus, o.bookId
+        from userOrder o
+        left join book b
+        on o.bookId = b.bookId
+        left join user u
+        on b.studentCode = u.studentCode
+        where o.studentCode = #{studentCode} and o.orderStatus = #{status}
+        order by o.buyDate desc
+        limit #{from}, #{size};
+    </select>
 </mapper>
