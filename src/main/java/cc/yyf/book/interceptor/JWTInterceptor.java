@@ -21,7 +21,7 @@ public class JWTInterceptor extends HandlerInterceptorAdapter {
      * redis 模板类
      */
     @Autowired
-    RedisTemplate<String, String> redisTemplate;
+    RedisTemplate redisTemplate;
 
     /**
      * 使用JWT鉴定权限

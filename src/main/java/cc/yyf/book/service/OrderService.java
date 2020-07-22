@@ -5,6 +5,8 @@ import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.pojo.UserOrder;
 
+import java.util.List;
+
 public interface OrderService {
     /**
      * 添加商品到购物车
@@ -77,4 +79,12 @@ public interface OrderService {
      * @return
      */
     Result payOrder(String studentCode, int orderId);
+
+    /**
+     * 从购物车中支付
+     * @param studentCode
+     * @param buyCarIds
+     * @return
+     */
+    Result payBuyCar(String studentCode, List<Integer> buyCarIds);
 }

@@ -14,7 +14,7 @@ public class PersonCache {
     HomeMapper homeMapper;
 
     @Autowired
-    RedisTemplate<String, String> redisTemplate;
+    RedisTemplate redisTemplate;
 
     /**
      * 对用户信息的一个缓存

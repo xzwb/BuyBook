@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class SmsCodeListen {
     @Autowired
-    RedisTemplate<String, String> redisTemplate;
+    RedisTemplate redisTemplate;
 
     private final int AppID = 1400341372;
 

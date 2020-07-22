@@ -89,4 +89,11 @@ public interface OrderMapper {
      * @return
      */
     int getBookIdByOrderId(@Param("orderId") int orderId);
+
+    /**
+     * 根据buyCarId获取bookId
+     * @param buyCarId
+     * @return
+     */
+    int getBookIdByBuyCarId(@Param("buyCarId") int buyCarId);
 }

@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -147,6 +148,25 @@ public class OrderServiceImpl implements OrderService {
     @Transactional
     public Result payOrder(String studentCode, int orderId) {
         orderMapper.cancelOrder(studentCode, orderId, OrderStatus.WAIT_PAY, OrderStatus.SUCCESS_PAY);
+        return Result.build(ResultStatusEnum.SUCCESS);
+    }
+
+    /**
+     * 从购物车直接支付
+     * @param studentCode
+     * @param buyCarIds
+     * @return
+     */
+    @Override
+    @Transactional
+    public Result payBuyCar(String studentCode, List<Integer> buyCarIds) {
+        Date date = new Date();
+        for (int buyCarId : buyCarIds) {
+            int bookId = orderMapper.getBookIdByBuyCarId(buyCarId);
+            UserOrder userOrder = UserOrder.build(studentCode, bookId, date, OrderStatus.SUCCESS_PAY, null);
+            orderMapper.insertBookOrder(userOrder);
+            orderMapper.deleteBuyCar(studentCode, buyCarId);
+        }
         return Result.build(ResultStatusEnum.SUCCESS);
     }
 

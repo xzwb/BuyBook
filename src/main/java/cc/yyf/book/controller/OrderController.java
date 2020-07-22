@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.Date;
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -16,6 +17,12 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
+    /**
+     * 添加购物车
+     * @param buyCarAdd
+     * @param request
+     * @return
+     */
     @PostMapping("/u/add/buyCar")
     public Result addBuyCar(@RequestBody BuyCarAdd buyCarAdd,
                             HttpServletRequest request) {
@@ -138,5 +145,16 @@ public class OrderController {
                            HttpServletRequest request) {
         String studentCode = (String) request.getAttribute("studentCode");
         return orderService.payOrder(studentCode, orderId);
+    }
+
+    /**
+     * 从购物车中直接支付
+     * @return
+     */
+    @PostMapping("/u/pay/buyCar")
+    public Result payBuyCar(@RequestBody List<Integer> buyCarIds,
+                            HttpServletRequest request) {
+        String studentCode = (String) request.getAttribute("studentCode");
+        return orderService.payBuyCar(studentCode, buyCarIds);
     }
 }

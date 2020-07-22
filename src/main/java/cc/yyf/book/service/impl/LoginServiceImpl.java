@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class LoginServiceImpl implements LoginService {
     @Autowired
-    RedisTemplate<String, String> redisTemplate;
+    RedisTemplate redisTemplate;
 
     @Autowired
     LoginMapper loginMapper;

@@ -117,4 +117,9 @@
     <select id="getBookIdByOrderId" resultType="int">
         select bookId from userOrder where orderId = #{orderId};
     </select>
+
+    <!-- 通过buyCarId查询bookId -->
+    <select id="getBookIdByBuyCarId" resultType="int">
+        select bookId from buyCar where buyCarId = #{buyCarId};
+    </select>
 </mapper>

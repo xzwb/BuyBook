@@ -31,7 +31,7 @@ public class RegisterServiceImpl implements RegisterService {
      * redis
      */
     @Autowired
-    RedisTemplate<String, String> redisTemplate;
+    RedisTemplate redisTemplate;
 
     /**
      * rabbitmq延迟队列
