@@ -1,9 +1,6 @@
 package cc.yyf.book.mapper;
 
-import cc.yyf.book.pojo.BuyCarAdd;
-import cc.yyf.book.pojo.BuyCarSelect;
-import cc.yyf.book.pojo.Page;
-import cc.yyf.book.pojo.UserOrder;
+import cc.yyf.book.pojo.*;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -73,4 +70,23 @@ public interface OrderMapper {
      * @param userOrder
      */
     void buyBook(UserOrder userOrder);
+
+    /**
+     * 取消一个待支付的订单
+     * @param studentCode 学号
+     * @param orderId 订单号
+     * @param oldStatus 以前的订单状态为待支付
+     * @param newStatus 新的订单状态为已取消
+     */
+    void cancelOrder(@Param("studentCode") String studentCode,
+                     @Param("orderId") int orderId,
+                     @Param("oldStatus")OrderStatus oldStatus,
+                     @Param("newStatus")OrderStatus newStatus);
+
+    /**
+     * 通过订单号来获取bookId
+     * @param orderId
+     * @return
+     */
+    int getBookIdByOrderId(@Param("orderId") int orderId);
 }

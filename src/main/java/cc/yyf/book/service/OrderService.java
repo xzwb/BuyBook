@@ -61,4 +61,12 @@ public interface OrderService {
      * @return
      */
     Result buyBook(UserOrder userOrder);
+
+    /**
+     * 取消一个待支付的订单
+     * @param studentCode 学号
+     * @param orderId 订单号
+     * @return
+     */
+    Result cancelOrder(String studentCode, int orderId);
 }

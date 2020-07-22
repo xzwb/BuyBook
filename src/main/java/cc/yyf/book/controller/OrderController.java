@@ -83,7 +83,6 @@ public class OrderController {
         return orderService.searchOrder(studentCode, from, size);
     }
 
-
     /**
      * 按照订单条件查看订单
      * @param page
@@ -100,6 +99,12 @@ public class OrderController {
         return orderService.searchOrderByStyle(studentCode, orderStatus, from, size);
     }
 
+    /**
+     * 从商品主页直接购买
+     * @param bookId
+     * @param request
+     * @return
+     */
     @PostMapping("/u/buy/book/{bookId}")
     public Result buyBookPay(@PathVariable("bookId") int bookId,
                           HttpServletRequest request) {
@@ -107,5 +112,17 @@ public class OrderController {
         Date date = new Date();
         UserOrder userOrder = UserOrder.build(studentCode, bookId, date, OrderStatus.SUCCESS_PAY, null);
         return orderService.buyBook(userOrder);
+    }
+
+    /**
+     * 取消一个订单
+     * @param orderId
+     * @return
+     */
+    @PostMapping("/u/cancel/{orderId}")
+    public Result cancelOrder(@PathVariable("orderId") int orderId,
+                              HttpServletRequest request) {
+        String studentCode = (String) request.getAttribute("studentCode");
+        return orderService.cancelOrder(studentCode, orderId);
     }
 }

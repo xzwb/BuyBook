@@ -118,6 +118,22 @@ public class OrderServiceImpl implements OrderService {
     @Transactional
     public Result buyBook(UserOrder userOrder) {
         orderMapper.buyBook(userOrder);
+        bookMapper.supStock(userOrder.getBookId());
+        return Result.build(ResultStatusEnum.SUCCESS);
+    }
+
+    /**
+     * 取消一个待支付的订单
+     * @param studentCode 学号
+     * @param orderId 订单号
+     * @return
+     */
+    @Override
+    @Transactional
+    public Result cancelOrder(String studentCode, int orderId) {
+        orderMapper.cancelOrder(studentCode, orderId, OrderStatus.WAIT_PAY, OrderStatus.CANCEL);
+        int bookId = orderMapper.getBookIdByOrderId(orderId);
+        bookMapper.addStock(bookId);
         return Result.build(ResultStatusEnum.SUCCESS);
     }
 

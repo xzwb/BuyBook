@@ -105,4 +105,16 @@
         values(default, #{studentCode}, #{bookId}, #{buyDate},
         #{orderStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler}, default);
     </insert>
+
+    <!-- 取消一个待支付的订单 -->
+    <update id="cancelOrder">
+        update userOrder
+        set orderStatus = #{newStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler}
+        where studentCode = #{studentCode} and orderId = #{orderId} and orderStatus = #{oldStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler};
+    </update>
+
+    <!-- 通过orderID查找bookId -->
+    <select id="getBookIdByOrderId" resultType="int">
+        select bookId from userOrder where orderId = #{orderId};
+    </select>
 </mapper>
