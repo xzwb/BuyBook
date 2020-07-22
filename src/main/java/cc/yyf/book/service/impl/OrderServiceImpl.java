@@ -138,6 +138,19 @@ public class OrderServiceImpl implements OrderService {
     }
 
     /**
+     * 支付一个待支付的订单
+     * @param studentCode
+     * @param orderId
+     * @return
+     */
+    @Override
+    @Transactional
+    public Result payOrder(String studentCode, int orderId) {
+        orderMapper.cancelOrder(studentCode, orderId, OrderStatus.WAIT_PAY, OrderStatus.SUCCESS_PAY);
+        return Result.build(ResultStatusEnum.SUCCESS);
+    }
+
+    /**
      * 检测是否有货
      */
     @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)

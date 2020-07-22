@@ -69,4 +69,12 @@ public interface OrderService {
      * @return
      */
     Result cancelOrder(String studentCode, int orderId);
+
+    /**
+     * 支付一个待支付的订单
+     * @param studentCode
+     * @param orderId
+     * @return
+     */
+    Result payOrder(String studentCode, int orderId);
 }

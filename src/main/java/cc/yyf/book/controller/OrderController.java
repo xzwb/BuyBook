@@ -125,4 +125,18 @@ public class OrderController {
         String studentCode = (String) request.getAttribute("studentCode");
         return orderService.cancelOrder(studentCode, orderId);
     }
+
+
+    /**
+     * 从订单页支付一个待支付的订单
+     * @param orderId
+     * @param request
+     * @return
+     */
+    @PostMapping("/u/pay/order/{orderId}")
+    public Result payOrder(@PathVariable("orderId")int orderId,
+                           HttpServletRequest request) {
+        String studentCode = (String) request.getAttribute("studentCode");
+        return orderService.payOrder(studentCode, orderId);
+    }
 }
