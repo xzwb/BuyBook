@@ -35,18 +35,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     RestHighLevelClient restHighLevelClient;
 
-//    /**
-//     * 添加商品到购物车
-//     * @param buyCarAdd
-//     * @return
-//     */
-//    @Override
-//    @Transactional
-//    public Result addBuyCar(BuyCarAdd buyCarAdd) {
-//        orderMapper.insertBuyCar(buyCarAdd);
-//        return Result.build(ResultStatusEnum.SUCCESS);
-//    }
-//
+
     /**
      * 获取购物车中的内容
      * @param page
@@ -108,19 +97,6 @@ public class OrderServiceImpl implements OrderService {
         }
         return buyCar;
     }
-//
-//    /**
-//     * 从购物车中删除一件商品
-//     * @param studentCode 学号
-//     * @param buyCarId 购物车中商品的编号
-//     * @return
-//     */
-//    @Transactional
-//    @Override
-//    public Result deleteBuyCar(String studentCode, int buyCarId) {
-//        orderMapper.deleteBuyCar(studentCode, buyCarId);
-//        return Result.build(ResultStatusEnum.SUCCESS);
-//    }
 
     /**
      * 添加商品到购物车,采用redis中的hash结构
@@ -223,24 +199,6 @@ public class OrderServiceImpl implements OrderService {
         return Result.build(ResultStatusEnum.SUCCESS);
     }
 
-//    /**
-//     * 从购物车直接支付
-//     * @param studentCode
-//     * @param buyCarIds
-//     * @return
-//     */
-//    @Override
-//    @Transactional
-//    public Result payBuyCar(String studentCode, List<Integer> buyCarIds) {
-//        Date date = new Date();
-//        for (int buyCarId : buyCarIds) {
-//            int bookId = orderMapper.getBookIdByBuyCarId(buyCarId);
-//            UserOrder userOrder = UserOrder.build(studentCode, bookId, date, OrderStatus.SUCCESS_PAY, null);
-//            orderMapper.insertBookOrder(userOrder);
-//            orderMapper.deleteBuyCar(studentCode, buyCarId);
-//        }
-//        return Result.build(ResultStatusEnum.SUCCESS);
-//    }
 
     /**
      * 检测是否有货

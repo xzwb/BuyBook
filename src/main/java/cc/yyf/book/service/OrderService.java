@@ -3,15 +3,9 @@ package cc.yyf.book.service;
 import cc.yyf.book.pojo.*;
 
 import java.io.IOException;
-import java.util.List;
+
 
 public interface OrderService {
-//    /**
-//     * 添加商品到购物车
-//     * @param buyCarAdd
-//     * @return
-//     */
-//    Result addBuyCar(BuyCarAdd buyCarAdd);
 
     /**
      * 添加商品到购物车
