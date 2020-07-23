@@ -4,15 +4,21 @@ import cc.yyf.book.mapper.BookMapper;
 import cc.yyf.book.mapper.OrderMapper;
 import cc.yyf.book.pojo.*;
 import cc.yyf.book.service.OrderService;
+import cc.yyf.book.util.BookUtil;
+import cc.yyf.book.util.ESIndex;
+import org.elasticsearch.action.get.GetRequest;
+import org.elasticsearch.action.get.GetResponse;
+import org.elasticsearch.client.RequestOptions;
+import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.io.IOException;
+import java.util.*;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -23,18 +29,24 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     BookMapper bookMapper;
 
-    /**
-     * 添加商品到购物车
-     * @param buyCarAdd
-     * @return
-     */
-    @Override
-    @Transactional
-    public Result addBuyCar(BuyCarAdd buyCarAdd) {
-        orderMapper.insertBuyCar(buyCarAdd);
-        return Result.build(ResultStatusEnum.SUCCESS);
-    }
+    @Autowired
+    RedisTemplate redisTemplate;
 
+    @Autowired
+    RestHighLevelClient restHighLevelClient;
+
+//    /**
+//     * 添加商品到购物车
+//     * @param buyCarAdd
+//     * @return
+//     */
+//    @Override
+//    @Transactional
+//    public Result addBuyCar(BuyCarAdd buyCarAdd) {
+//        orderMapper.insertBuyCar(buyCarAdd);
+//        return Result.build(ResultStatusEnum.SUCCESS);
+//    }
+//
     /**
      * 获取购物车中的内容
      * @param page
@@ -42,25 +54,85 @@ public class OrderServiceImpl implements OrderService {
      * @return
      */
     @Override
-    @Transactional
-    public Result searchBuyCar(Page page, String studentCode) {
+    public Result searchBuyCar(Page page, String studentCode) throws IOException {
         int from = (page.getPage() - 1) * page.getSize();
         int size = page.getSize();
-        List<BuyCarSelect> list = new ArrayList<>();
-        list = orderMapper.searchBuyCar(from, size, studentCode);
-        return Result.build(ResultStatusEnum.SUCCESS, list);
+        List<BuyCar> buyCars = new ArrayList<>();
+        List<String> fieldKeys = getFieldKeys(studentCode, from, size);
+        if (fieldKeys != null) {
+            for (String key : fieldKeys) {
+                buyCars.add(getBuyCar(studentCode, key));
+            }
+        }
+        return Result.build(ResultStatusEnum.SUCCESS, buyCars);
     }
 
     /**
-     * 从购物车中删除一件商品
-     * @param studentCode 学号
-     * @param buyCarId 购物车中商品的编号
+     * 获取购物车中需要的field的key
+     * @param studentCode
      * @return
      */
-    @Transactional
+    private List<String> getFieldKeys(String studentCode, int from, int size) {
+        Set<String> fieldKeySet = redisTemplate.opsForHash().keys(BookUtil.buyCar+studentCode);
+        // 为了获取set的子集我们要先把set集合转换成list集合
+        List<String> fieldKeys = new ArrayList<>(fieldKeySet);
+        if (fieldKeys.size() >= from) {
+            if (fieldKeys.size() >= from+size) {
+                return fieldKeys.subList(from, from+size);
+            } else {
+                return fieldKeys.subList(from, fieldKeys.size());
+            }
+        }
+        return null;
+    }
+
+    /**
+     * 获取购物车信息时构造buyCar
+     * @param studentCode
+     * @return
+     */
+    private BuyCar getBuyCar(String studentCode, String key) throws IOException {
+        // 判断version
+        Map<String, Object> map1 = (Map<String, Object>) redisTemplate.opsForHash().get(BookUtil.buyCar+studentCode, key);
+        BuyCar buyCar = BuyCar.buildRedis(map1);
+        Integer version = (Integer) redisTemplate.opsForValue().get(BookUtil.version+buyCar.getBookId());
+        // 如果不相同就去es中重新查找
+        if (version != buyCar.getVersion()) {
+            GetRequest getRequest = new GetRequest(ESIndex.es, buyCar.getBookId()+"");
+            GetResponse getResponse = restHighLevelClient.get(getRequest, RequestOptions.DEFAULT);
+            Map<String, Object> map = getResponse.getSourceAsMap();
+            BuyCar buyCar1 = BuyCar.build(map);
+            System.out.println(buyCar1);
+            buyCar1.setVersion(version);
+            addBuyCar(buyCar, studentCode);
+        }
+        return buyCar;
+    }
+//
+//    /**
+//     * 从购物车中删除一件商品
+//     * @param studentCode 学号
+//     * @param buyCarId 购物车中商品的编号
+//     * @return
+//     */
+//    @Transactional
+//    @Override
+//    public Result deleteBuyCar(String studentCode, int buyCarId) {
+//        orderMapper.deleteBuyCar(studentCode, buyCarId);
+//        return Result.build(ResultStatusEnum.SUCCESS);
+//    }
+
+    /**
+     * 添加商品到购物车,采用redis中的hash结构
+     * @param buyCar
+     * @param studentCode
+     * @return
+     */
     @Override
-    public Result deleteBuyCar(String studentCode, int buyCarId) {
-        orderMapper.deleteBuyCar(studentCode, buyCarId);
+    public Result addBuyCar(BuyCar buyCar, String studentCode) {
+        Integer version = (Integer) redisTemplate.opsForValue().get(BookUtil.version+buyCar.getBookId());
+        buyCar.setVersion(version);
+        redisTemplate.opsForHash().put(BookUtil.buyCar+studentCode, buyCar.getBookId()+"", buyCar);
         return Result.build(ResultStatusEnum.SUCCESS);
     }
 
@@ -151,24 +223,24 @@ public class OrderServiceImpl implements OrderService {
         return Result.build(ResultStatusEnum.SUCCESS);
     }
 
-    /**
-     * 从购物车直接支付
-     * @param studentCode
-     * @param buyCarIds
-     * @return
-     */
-    @Override
-    @Transactional
-    public Result payBuyCar(String studentCode, List<Integer> buyCarIds) {
-        Date date = new Date();
-        for (int buyCarId : buyCarIds) {
-            int bookId = orderMapper.getBookIdByBuyCarId(buyCarId);
-            UserOrder userOrder = UserOrder.build(studentCode, bookId, date, OrderStatus.SUCCESS_PAY, null);
-            orderMapper.insertBookOrder(userOrder);
-            orderMapper.deleteBuyCar(studentCode, buyCarId);
-        }
-        return Result.build(ResultStatusEnum.SUCCESS);
-    }
+//    /**
+//     * 从购物车直接支付
+//     * @param studentCode
+//     * @param buyCarIds
+//     * @return
+//     */
+//    @Override
+//    @Transactional
+//    public Result payBuyCar(String studentCode, List<Integer> buyCarIds) {
+//        Date date = new Date();
+//        for (int buyCarId : buyCarIds) {
+//            int bookId = orderMapper.getBookIdByBuyCarId(buyCarId);
+//            UserOrder userOrder = UserOrder.build(studentCode, bookId, date, OrderStatus.SUCCESS_PAY, null);
+//            orderMapper.insertBookOrder(userOrder);
+//            orderMapper.deleteBuyCar(studentCode, buyCarId);
+//        }
+//        return Result.build(ResultStatusEnum.SUCCESS);
+//    }
 
     /**
      * 检测是否有货

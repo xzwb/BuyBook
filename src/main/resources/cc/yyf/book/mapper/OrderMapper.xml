@@ -43,28 +43,28 @@
         </association>
     </resultMap>
 
-    <!-- 添加书籍到购物车 -->
-    <insert id="insertBuyCar" parameterType="buyCarAdd">
-        insert into buyCar values(default, #{bookId}, #{studentCode}, #{addTime});
-    </insert>
+<!--    &lt;!&ndash; 添加书籍到购物车 &ndash;&gt;-->
+<!--    <insert id="insertBuyCar" parameterType="buyCarAdd">-->
+<!--        insert into buyCar values(default, #{bookId}, #{studentCode}, #{addTime});-->
+<!--    </insert>-->
 
-    <!-- 查询购物车 -->
-    <select id="searchBuyCar" resultMap="searchBuyCar">
-        select b.addTime, b.buyCarId, book.*, u.userName
-        from buyCar b
-        left join book
-        on b.bookId = book.bookId
-        left join user u
-        on u.studentCode = book.studentCode
-        where b.studentCode = #{studentCode}
-        order by addTime desc
-        limit #{from}, #{size};
-    </select>
+<!--    &lt;!&ndash; 查询购物车 &ndash;&gt;-->
+<!--    <select id="searchBuyCar" resultMap="searchBuyCar">-->
+<!--        select b.addTime, b.buyCarId, book.*, u.userName-->
+<!--        from buyCar b-->
+<!--        left join book-->
+<!--        on b.bookId = book.bookId-->
+<!--        left join user u-->
+<!--        on u.studentCode = book.studentCode-->
+<!--        where b.studentCode = #{studentCode}-->
+<!--        order by addTime desc-->
+<!--        limit #{from}, #{size};-->
+<!--    </select>-->
 
-    <!-- 删除购物车中的一件商品 -->
-    <delete id="deleteBuyCar">
-        delete from buyCar where buyCarId = #{buyCarId} and studentCode = #{studentCode}
-    </delete>
+<!--    &lt;!&ndash; 删除购物车中的一件商品 &ndash;&gt;-->
+<!--    <delete id="deleteBuyCar">-->
+<!--        delete from buyCar where buyCarId = #{buyCarId} and studentCode = #{studentCode}-->
+<!--    </delete>-->
 
     <!-- 添加订单 -->
     <insert id="insertBookOrder" parameterType="userOrder">

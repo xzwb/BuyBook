@@ -1,19 +1,26 @@
 package cc.yyf.book.service;
 
-import cc.yyf.book.pojo.BuyCarAdd;
-import cc.yyf.book.pojo.Page;
-import cc.yyf.book.pojo.Result;
-import cc.yyf.book.pojo.UserOrder;
+import cc.yyf.book.pojo.*;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface OrderService {
+//    /**
+//     * 添加商品到购物车
+//     * @param buyCarAdd
+//     * @return
+//     */
+//    Result addBuyCar(BuyCarAdd buyCarAdd);
+
     /**
      * 添加商品到购物车
-     * @param buyCarAdd
+     * @param buyCar
+     * @param studentCode
      * @return
      */
-    Result addBuyCar(BuyCarAdd buyCarAdd);
+    Result addBuyCar(BuyCar buyCar, String studentCode);
+
 
     /**
      * 获取自己的购物车信息
@@ -21,15 +28,15 @@ public interface OrderService {
      * @param studentCode
      * @return
      */
-    Result searchBuyCar(Page page, String studentCode);
-
-    /**
-     * 删除购物车中的一件商品
-     * @param studentCode 学号
-     * @param buyCarId 购物车中商品的编号
-     * @return
-     */
-    Result deleteBuyCar(String studentCode, int buyCarId);
+    Result searchBuyCar(Page page, String studentCode) throws IOException;
+//
+//    /**
+//     * 删除购物车中的一件商品
+//     * @param studentCode 学号
+//     * @param buyCarId 购物车中商品的编号
+//     * @return
+//     */
+//    Result deleteBuyCar(String studentCode, int buyCarId);
 
     /**
      * 保存订单
@@ -80,11 +87,11 @@ public interface OrderService {
      */
     Result payOrder(String studentCode, int orderId);
 
-    /**
-     * 从购物车中支付
-     * @param studentCode
-     * @param buyCarIds
-     * @return
-     */
-    Result payBuyCar(String studentCode, List<Integer> buyCarIds);
+//    /**
+//     * 从购物车中支付
+//     * @param studentCode
+//     * @param buyCarIds
+//     * @return
+//     */
+//    Result payBuyCar(String studentCode, List<Integer> buyCarIds);
 }

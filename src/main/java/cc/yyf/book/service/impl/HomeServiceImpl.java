@@ -1,13 +1,13 @@
 package cc.yyf.book.service.impl;
 
 import cc.yyf.book.cache.PersonCache;
-import cc.yyf.book.mapper.BookMapper;
 import cc.yyf.book.mapper.HomeMapper;
 import cc.yyf.book.pojo.Book;
 import cc.yyf.book.pojo.BookUpdate;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.pojo.ResultStatusEnum;
 import cc.yyf.book.service.HomeService;
+import cc.yyf.book.util.BookUtil;
 import cc.yyf.book.util.ESIndex;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
@@ -20,12 +20,14 @@ import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.sort.FieldSortBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class HomeServiceImpl implements HomeService {
@@ -38,6 +40,9 @@ public class HomeServiceImpl implements HomeService {
 
     @Autowired
     HomeMapper homeMapper;
+
+    @Autowired
+    RedisTemplate redisTemplate;
 
 
     /**
@@ -97,6 +102,8 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public Result updateBook(String studentCode, BookUpdate book) {
         homeMapper.updateBook(studentCode, book);
+        // 每一次的修改都会使redis中的书籍版本号加一
+        redisTemplate.opsForValue().increment(BookUtil.version+book.getBookId());
         return Result.build(ResultStatusEnum.SUCCESS);
     }
 }

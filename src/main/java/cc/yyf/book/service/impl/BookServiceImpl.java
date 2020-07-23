@@ -6,7 +6,7 @@ import cc.yyf.book.pojo.Result;
 import cc.yyf.book.pojo.ResultStatusEnum;
 import cc.yyf.book.service.BookService;
 import cc.yyf.book.thread.SaveFileThread;
-import cc.yyf.book.util.BookCount;
+import cc.yyf.book.util.BookUtil;
 import cc.yyf.book.util.ESIndex;
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
@@ -59,6 +59,9 @@ public class BookServiceImpl implements BookService {
     public Result release(Book book, String fileURI, Part part) {
         bookMapper.insertBook(book);
         new SaveFileThread(part, fileURI).run();
+        Integer version = 1;
+        // 在redis中添加一个商品的版本号
+        redisTemplate.opsForValue().set(BookUtil.version+book.getBookId(), 1);
         return Result.build(ResultStatusEnum.SUCCESS, book);
     }
 
@@ -75,7 +78,7 @@ public class BookServiceImpl implements BookService {
         // 判断文档是否存在
         if (restHighLevelClient.exists(getRequest, RequestOptions.DEFAULT)) {
             // 访问量加一
-            redisTemplate.opsForHyperLogLog().add(BookCount.count+bookId, studentCode);
+            redisTemplate.opsForHyperLogLog().add(BookUtil.count+bookId, studentCode);
 
             GetResponse getResponse = restHighLevelClient.get(getRequest, RequestOptions.DEFAULT);
             Map<String, Object> map = getResponse.getSourceAsMap();
@@ -187,7 +190,7 @@ public class BookServiceImpl implements BookService {
      */
     @Override
     public Result countBook(int bookId) {
-        Long size = redisTemplate.opsForHyperLogLog().size(BookCount.count + bookId);
+        Long size = redisTemplate.opsForHyperLogLog().size(BookUtil.count + bookId);
         Map<String, Long> map = new HashMap<>();
         map.put("count", size);
         return Result.build(ResultStatusEnum.SUCCESS, map);
