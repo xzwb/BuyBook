@@ -57,6 +57,20 @@ public class OrderServiceImpl implements OrderService {
     }
 
     /**
+     * 删除购物车中的一个商品
+     * @param studentCode 学号
+     * @param bookIds 购物车中商品的编号
+     * @return
+     */
+    @Override
+    public Result deleteBuyCar(String studentCode, List<Integer> bookIds) {
+        for (Integer bookId : bookIds) {
+            redisTemplate.opsForHash().delete(BookUtil.buyCar+studentCode, bookId+"");
+        }
+        return Result.build(ResultStatusEnum.SUCCESS);
+    }
+
+    /**
      * 获取购物车中需要的field的key
      * @param studentCode
      * @return

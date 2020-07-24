@@ -3,6 +3,7 @@ package cc.yyf.book.service;
 import cc.yyf.book.pojo.*;
 
 import java.io.IOException;
+import java.util.List;
 
 
 public interface OrderService {
@@ -23,14 +24,14 @@ public interface OrderService {
      * @return
      */
     Result searchBuyCar(Page page, String studentCode) throws IOException;
-//
-//    /**
-//     * 删除购物车中的一件商品
-//     * @param studentCode 学号
-//     * @param buyCarId 购物车中商品的编号
-//     * @return
-//     */
-//    Result deleteBuyCar(String studentCode, int buyCarId);
+
+    /**
+     * 删除购物车中的一件商品
+     * @param studentCode 学号
+     * @param bookIds 购物车中商品的编号
+     * @return
+     */
+    Result deleteBuyCar(String studentCode, List<Integer> bookIds);
 
     /**
      * 保存订单

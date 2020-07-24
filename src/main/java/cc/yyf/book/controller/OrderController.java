@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
+
 @RestController
 @CrossOrigin
 public class OrderController {
@@ -28,11 +29,8 @@ public class OrderController {
                             HttpServletRequest request) {
         String studentCode = (String) request.getAttribute("studentCode");
         return orderService.addBuyCar(buyCar, studentCode);
-//        buyCarAdd.setAddTime(new Date());
-//        buyCarAdd.setStudentCode(studentCode);
-//        return orderService.addBuyCar(buyCarAdd);
     }
-//
+
     /**
      * 获取自己购物车的内容
      * @param page
@@ -45,19 +43,19 @@ public class OrderController {
         String studentCode = (String) request.getAttribute("studentCode");
         return orderService.searchBuyCar(page, studentCode);
     }
-//
-//    /**
-//     * 删除购物车中的商品(一件)
-//     * @param buyCarId
-//     * @param request
-//     * @return
-//     */
-//    @PostMapping("/u/delete/buyCar/{buyCarId}")
-//    public Result deleteBuyCar(@PathVariable("buyCarId") int buyCarId,
-//                               HttpServletRequest request) {
-//        String studentCode = (String) request.getAttribute("studentCode");
-//        return orderService.deleteBuyCar(studentCode, buyCarId);
-//    }
+
+
+    /**
+     * 删除购物车中书籍
+     * @param bookIds
+     * @return
+     */
+    @PostMapping("/u/delete/buyCar")
+    public Result deleteBuyCar(@RequestBody List<Integer> bookIds,
+                               HttpServletRequest request) {
+        String studentCode = (String) request.getAttribute("studentCode");
+        return orderService.deleteBuyCar(studentCode, bookIds);
+    }
 
     /**
      * 从商品主页保存订单
@@ -148,14 +146,4 @@ public class OrderController {
         return orderService.payOrder(studentCode, orderId);
     }
 
-//    /**
-//     * 从购物车中直接支付
-//     * @return
-//     */
-//    @PostMapping("/u/pay/buyCar")
-//    public Result payBuyCar(@RequestBody List<Integer> buyCarIds,
-//                            HttpServletRequest request) {
-//        String studentCode = (String) request.getAttribute("studentCode");
-//        return orderService.payBuyCar(studentCode, buyCarIds);
-//    }
 }
