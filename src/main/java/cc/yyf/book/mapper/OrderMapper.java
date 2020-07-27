@@ -3,7 +3,7 @@ package cc.yyf.book.mapper;
 import cc.yyf.book.pojo.*;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.web.bind.annotation.RequestBody;
+
 
 import java.util.List;
 
@@ -41,12 +41,6 @@ public interface OrderMapper {
                                 @Param("size") int size);
 
     /**
-     * 直接从商品主页付款
-     * @param userOrder
-     */
-    void buyBook(UserOrder userOrder);
-
-    /**
      * 取消一个待支付的订单
      * @param studentCode 学号
      * @param orderId 订单号
@@ -65,5 +59,17 @@ public interface OrderMapper {
      */
     int getBookIdByOrderId(@Param("orderId") int orderId);
 
+    /**
+     * 通过订单号查询该订单买了多少个
+     * @param orderId
+     * @return
+     */
+    int getNumByOrderId(@Param("orderId") int orderId);
+
+
+    /**
+     * 根据orderId获取订单信息
+     */
+    Order getOrderByOrderId(@Param("orderId") int orderId);
 
 }

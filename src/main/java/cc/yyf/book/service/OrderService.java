@@ -3,6 +3,7 @@ package cc.yyf.book.service;
 import cc.yyf.book.pojo.*;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.List;
 
 
@@ -33,12 +34,7 @@ public interface OrderService {
      */
     Result deleteBuyCar(String studentCode, List<Integer> bookIds);
 
-    /**
-     * 保存订单
-     * @param userOrder
-     * @return
-     */
-    Result saveBookOrder(UserOrder userOrder);
+
 
     /**
      * 查看所有的订单
@@ -59,12 +55,6 @@ public interface OrderService {
      */
     Result searchOrderByStyle(String studentCode, int status, int from, int size);
 
-    /**
-     * 用户直接从商品主页购买
-     * @param userOrder
-     * @return
-     */
-    Result buyBook(UserOrder userOrder);
 
     /**
      * 取消一个待支付的订单
@@ -82,11 +72,12 @@ public interface OrderService {
      */
     Result payOrder(String studentCode, int orderId);
 
-//    /**
-//     * 从购物车中支付
-//     * @param studentCode
-//     * @param buyCarIds
-//     * @return
-//     */
-//    Result payBuyCar(String studentCode, List<Integer> buyCarIds);
+
+    /**
+     * 生成订单
+     * @param makeOrder
+     * @param studentCode
+     * @return
+     */
+    Result makeOrder(MakeOrder makeOrder, String studentCode) throws IOException, ParseException;
 }

@@ -16,15 +16,18 @@ public interface BookMapper {
     void insertBook(Book book);
 
     /**
-     * 库存减一
+     * 库存减
      * @param bookId
+     * @param num 库存减少的数量
      */
-    void supStock(int bookId);
+    void subStock(@Param("bookId") int bookId,
+                  @Param("num") int num);
 
     /**
      * 增加库存
      */
-    void addStock(@Param("bookId") int bookId);
+    void addStock(@Param("bookId") int bookId,
+                  @Param("num") int num);
 
 
     /**

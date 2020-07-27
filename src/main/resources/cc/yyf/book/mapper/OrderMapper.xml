@@ -12,6 +12,7 @@
         <result property="studentCode" column="buyer"/>
         <result property="bookId" column="bookId"/>
         <result property="buyDate" column="buyDate"/>
+        <result property="number" column="number"/>
         <result property="orderStatus" column="orderStatus" typeHandler="cc.yyf.book.typeHandler.OrderEnumTypeHandler"/>
         <association property="book" javaType="cc.yyf.book.pojo.Book">
             <id property="bookId" column="bookId"/>
@@ -24,21 +25,21 @@
             <result property="userName" column="userName"/>
             <result property="bookDate" column="bookDate"/>
             <result property="price" column="price"/>
+
         </association>
     </resultMap>
 
 
-
     <!-- 添加订单 -->
-    <insert id="insertBookOrder" parameterType="userOrder">
+    <insert id="insertBookOrder" parameterType="userOrder" useGeneratedKeys="true" keyProperty="orderId">
          insert into userOrder values(default, #{studentCode},
         #{bookId}, #{buyDate},
-        #{orderStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler}, #{orderEndTime});
+        #{orderStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler}, #{orderEndTime}, #{number});
     </insert>
 
     <!-- 获取订单 -->
     <select id="searchOrder" resultMap="userOrder">
-        select b.*, u.userName, o.studentCode buyer, o.orderId, o.buyDate, o.orderStatus, o.bookId
+        select b.*, u.userName, o.studentCode buyer, o.orderId, o.buyDate, o.orderStatus, o.bookId, o.buyNumber as number
         from userOrder o
         left join book b
         on o.bookId = b.bookId
@@ -51,7 +52,7 @@
 
     <!-- 根据订单类别获取订单 -->
     <select id="searchOrderByStyle" resultMap="userOrder">
-        select b.*, u.userName, o.studentCode buyer, o.orderId, o.buyDate, o.orderStatus, o.bookId
+        select b.*, u.userName, o.studentCode buyer, o.orderId, o.buyDate, o.orderStatus, o.bookId, o.buyNumber as number
         from userOrder o
         left join book b
         on o.bookId = b.bookId
@@ -61,13 +62,6 @@
         order by o.buyDate desc
         limit #{from}, #{size};
     </select>
-
-    <!-- 用户直接从商品主页付款 -->
-    <insert id="buyBook" parameterType="userOrder">
-        insert into userOrder
-        values(default, #{studentCode}, #{bookId}, #{buyDate},
-        #{orderStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler}, default);
-    </insert>
 
     <!-- 取消一个待支付的订单 -->
     <update id="cancelOrder">
@@ -79,6 +73,22 @@
     <!-- 通过orderID查找bookId -->
     <select id="getBookIdByOrderId" resultType="int">
         select bookId from userOrder where orderId = #{orderId};
+    </select>
+
+    <!-- 通过orderID查询num -->
+    <select id="getNumByOrderId" resultType="int">
+        select buyNumber from userOrder where orderId = #{orderId};
+    </select>
+
+    <!-- 根据orderID获取订单 -->
+    <select id="getOrderByOrderId" resultType="order">
+        select o.orderId, o.bookId, b.bookName, b.studentCode as sellerStudentCode, u.userName as sellerName, b.bookSrc, b.price, o.buyNumber as number
+        from userOrder o
+        left join book b
+        on o.bookId = b.bookId
+        left join user u
+        on b.studentCode = u.studentCode
+        where orderId = #{orderId};
     </select>
 
 

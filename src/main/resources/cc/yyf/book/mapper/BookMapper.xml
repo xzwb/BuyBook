@@ -11,14 +11,14 @@
         #{bookIntroduction}, #{bookSrc}, #{bookDate}, #{price}, #{stock});
     </insert>
 
-    <!-- 库存减一 -->
-    <update id="supStock">
-        update book set stock = stock -1 where bookId = #{bookId};
+    <!-- 库存减 -->
+    <update id="subStock">
+        update book set stock = stock - #{num} where bookId = #{bookId};
     </update>
 
     <!-- 库存加一 -->
     <update id="addStock">
-        update book set stock = stock + 1 where bookId = #{bookId};
+        update book set stock = stock + #{num} where bookId = #{bookId};
     </update>
 
     <!-- 获取存货信息 -->
@@ -28,7 +28,7 @@
 
     <!-- 查询已过期订单的书籍编 -->
     <select id="selectInvalidOrder" resultType="int">
-        select bookId from userOrder where orderStatus = #{status, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler} and orderEndTime &lt; #{time};
+        select orderId from userOrder where orderStatus = #{status, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler} and orderEndTime &lt; #{time};
     </select>
 
     <!-- 取消过期订单 -->

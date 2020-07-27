@@ -1,5 +1,6 @@
 package cc.yyf.book.service.impl;
 
+import cc.yyf.book.exception.BuyCarException;
 import cc.yyf.book.mapper.BookMapper;
 import cc.yyf.book.mapper.OrderMapper;
 import cc.yyf.book.pojo.*;
@@ -10,15 +11,16 @@ import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.*;
+
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -31,6 +33,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     RedisTemplate redisTemplate;
+
+    @Autowired
+    RabbitTemplate rabbitTemplate;
 
     @Autowired
     RestHighLevelClient restHighLevelClient;
@@ -126,22 +131,6 @@ public class OrderServiceImpl implements OrderService {
         return Result.build(ResultStatusEnum.SUCCESS);
     }
 
-    /**
-     * 保存订单
-     * @param userOrder
-     * @return
-     */
-    @Override
-    @Transactional
-    public Result saveBookOrder(UserOrder userOrder) {
-        // 查查库存
-        if (haveBook(userOrder.getBookId())) {
-            orderMapper.insertBookOrder(userOrder);
-            bookMapper.supStock(userOrder.getBookId());
-            return Result.build(ResultStatusEnum.SUCCESS);
-        }
-        return Result.build(ResultStatusEnum.NOT_HAVE_STOCK);
-    }
 
     /**
      * 查看所有的订单
@@ -172,18 +161,6 @@ public class OrderServiceImpl implements OrderService {
         return Result.build(ResultStatusEnum.SUCCESS, list);
     }
 
-    /**
-     * 用户直接从商品主页付款
-     * @param userOrder
-     * @return
-     */
-    @Override
-    @Transactional
-    public Result buyBook(UserOrder userOrder) {
-        orderMapper.buyBook(userOrder);
-        bookMapper.supStock(userOrder.getBookId());
-        return Result.build(ResultStatusEnum.SUCCESS);
-    }
 
     /**
      * 取消一个待支付的订单
@@ -196,7 +173,8 @@ public class OrderServiceImpl implements OrderService {
     public Result cancelOrder(String studentCode, int orderId) {
         orderMapper.cancelOrder(studentCode, orderId, OrderStatus.WAIT_PAY, OrderStatus.CANCEL);
         int bookId = orderMapper.getBookIdByOrderId(orderId);
-        bookMapper.addStock(bookId);
+        int num = orderMapper.getNumByOrderId(orderId);
+        bookMapper.addStock(bookId, num);
         return Result.build(ResultStatusEnum.SUCCESS);
     }
 
@@ -213,16 +191,36 @@ public class OrderServiceImpl implements OrderService {
         return Result.build(ResultStatusEnum.SUCCESS);
     }
 
-
     /**
-     * 检测是否有货
+     * 生成订单
+     * @param makeOrder
+     * @param studentCode
+     * @return
      */
-    @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
-    public boolean haveBook(int bookId) {
-        int stock = bookMapper.getStock(bookId);
-        if (stock > 0) {
-            return true;
+    @Override
+    @Transactional
+    public Result makeOrder(MakeOrder makeOrder, String studentCode) throws IOException, ParseException {
+        List<Integer> bookIds = makeOrder.getBookIds();
+        List<Integer> number = makeOrder.getNumber();
+        List<Order> orders = new ArrayList<>();
+        int count = bookIds.size();
+        Date buyDate = new Date();
+        Date orderEndTime = new Date(buyDate.getTime() + 15*1000*60);
+        for (int i = 0; i < count; i++) {
+            Integer bookId = bookIds.get(i);
+            Integer num = number.get(i);
+            // 有货
+            if (bookMapper.getStock(bookId) >= num) {
+                UserOrder userOrder = UserOrder.build(studentCode, bookId, buyDate, OrderStatus.WAIT_PAY, orderEndTime, num);
+                orderMapper.insertBookOrder(userOrder);
+                orders.add(orderMapper.getOrderByOrderId(userOrder.getOrderId()));
+                // 减少库存
+                bookMapper.subStock(bookId, num);
+            } else {
+                // 没货回滚事务
+                throw new BuyCarException();
+            }
         }
-        return false;
+        return Result.build(ResultStatusEnum.SUCCESS, orders);
     }
 }

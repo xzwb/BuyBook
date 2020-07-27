@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 
@@ -58,21 +59,18 @@ public class OrderController {
     }
 
     /**
-     * 从商品主页保存订单
-     * @param bookId
+     * 生成订单并返回生成的订单
+     * @param order
      * @param request
      * @return
      */
-    @PostMapping("/u/save/order/{bookId}")
-    public Result buyBook(@PathVariable("bookId") int bookId,
-                          HttpServletRequest request) {
-        Date buyDate = new Date();
+    @PostMapping("/u/make/order")
+    public Result makeOrder(@RequestBody MakeOrder order,
+                            HttpServletRequest request) throws IOException, ParseException {
         String studentCode = (String) request.getAttribute("studentCode");
-        // 设置订单过期时间15分钟
-        Date orderEndTime = new Date(buyDate.getTime() + 15*1000*60);
-        UserOrder userOrder = UserOrder.build(studentCode, bookId, buyDate, OrderStatus.WAIT_PAY, orderEndTime);
-        return orderService.saveBookOrder(userOrder);
+        return orderService.makeOrder(order, studentCode);
     }
+
 
     /**
      * 获取用户自己所有订单信息
@@ -105,20 +103,6 @@ public class OrderController {
         return orderService.searchOrderByStyle(studentCode, orderStatus, from, size);
     }
 
-    /**
-     * 从商品主页直接购买
-     * @param bookId
-     * @param request
-     * @return
-     */
-    @PostMapping("/u/buy/book/{bookId}")
-    public Result buyBookPay(@PathVariable("bookId") int bookId,
-                          HttpServletRequest request) {
-        String studentCode = (String) request.getAttribute("studentCode");
-        Date date = new Date();
-        UserOrder userOrder = UserOrder.build(studentCode, bookId, date, OrderStatus.SUCCESS_PAY, null);
-        return orderService.buyBook(userOrder);
-    }
 
     /**
      * 取消一个订单

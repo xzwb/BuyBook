@@ -1,6 +1,7 @@
 package cc.yyf.book.job;
 
 import cc.yyf.book.mapper.BookMapper;
+import cc.yyf.book.mapper.OrderMapper;
 import cc.yyf.book.pojo.OrderStatus;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
@@ -21,6 +22,9 @@ public class OrderJob implements Job {
     @Autowired
     BookMapper bookMapper;
 
+    @Autowired
+    OrderMapper orderMapper;
+
     /**
      * 每分钟与最后过期时间比较,取消过期订单
      * @param jobExecutionContext
@@ -35,8 +39,10 @@ public class OrderJob implements Job {
         List<Integer> list = bookMapper.selectInvalidOrder(time, OrderStatus.WAIT_PAY);
         if (list != null) {
             bookMapper.orderJobMapper(time, OrderStatus.WAIT_PAY, OrderStatus.CANCEL);
-            for (int bookId : list) {
-                bookMapper.addStock(bookId);
+            for (int orderId : list) {
+                int bookId = orderMapper.getBookIdByOrderId(orderId);
+                int num = orderMapper.getNumByOrderId(orderId);
+                bookMapper.addStock(bookId, num);
             }
         }
     }

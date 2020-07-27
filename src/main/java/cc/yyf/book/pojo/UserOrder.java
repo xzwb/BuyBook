@@ -23,17 +23,20 @@ public class UserOrder {
     private OrderStatus orderStatus;
     // 订单结束时间
     private Date orderEndTime;
+    // 购买数量
+    private int number;
 
     // 书籍的详细信息
     private Book book;
 
-    public static UserOrder build(String studentCode, int bookId, Date buyDate, OrderStatus orderStatus, Date orderEndTime) {
+    public static UserOrder build(String studentCode, int bookId, Date buyDate, OrderStatus orderStatus, Date orderEndTime, int number) {
         UserOrder userOrder = new UserOrder();
         userOrder.setStudentCode(studentCode);
         userOrder.setBookId(bookId);
         userOrder.setBuyDate(buyDate);
         userOrder.setOrderStatus(orderStatus);
         userOrder.setOrderEndTime(orderEndTime);
+        userOrder.setNumber(number);
         return userOrder;
     }
 }
