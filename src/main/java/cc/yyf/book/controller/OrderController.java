@@ -136,4 +136,16 @@ public class OrderController {
         return orderService.payOrderNow(orderId);
     }
 
+
+    /**
+     * 确认收货
+     * @param orderId
+     * @return
+     */
+    @PostMapping("/u/ok/order/{orderId}")
+    public Result okOrder(@PathVariable("orderId") int orderId,
+                          HttpServletRequest request) {
+        String studentCode = (String) request.getAttribute("studentCode");
+        return orderService.okOrder(orderId, studentCode);
+    }
 }

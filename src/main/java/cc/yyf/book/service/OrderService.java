@@ -86,4 +86,11 @@ public interface OrderService {
      * @return
      */
     Result payOrderNow(List<Integer> orderIds);
+
+    /**
+     * 确认收货
+     * @param studentCode
+     * @param orderId
+     */
+    Result okOrder(int orderId, String studentCode);
 }

@@ -245,6 +245,19 @@ public class OrderServiceImpl implements OrderService {
     }
 
     /**
+     * 确认收货
+     * @param orderId
+     * @param studentCode
+     * @return
+     */
+    @Override
+    @Transactional
+    public Result okOrder(int orderId, String studentCode) {
+        orderMapper.cancelOrder(studentCode, orderId, OrderStatus.SUCCESS_PAY, OrderStatus.OK);
+        return Result.build(ResultStatusEnum.SUCCESS);
+    }
+
+    /**
      * 检测order是否过期
      */
     @Transactional
