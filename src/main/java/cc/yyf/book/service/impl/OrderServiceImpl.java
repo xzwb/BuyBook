@@ -1,6 +1,7 @@
 package cc.yyf.book.service.impl;
 
 import cc.yyf.book.exception.BuyCarException;
+import cc.yyf.book.exception.OrderException;
 import cc.yyf.book.mapper.BookMapper;
 import cc.yyf.book.mapper.OrderMapper;
 import cc.yyf.book.pojo.*;
@@ -180,14 +181,16 @@ public class OrderServiceImpl implements OrderService {
 
     /**
      * 支付一个待支付的订单
-     * @param studentCode
      * @param orderId
      * @return
      */
     @Override
     @Transactional
-    public Result payOrder(String studentCode, int orderId) {
-        orderMapper.cancelOrder(studentCode, orderId, OrderStatus.WAIT_PAY, OrderStatus.SUCCESS_PAY);
+    public Result payOrder(int orderId) {
+        if (orderEnd(orderId)) {
+            throw new OrderException();
+        }
+        orderMapper.payOrder(OrderStatus.SUCCESS_PAY, orderId);
         return Result.build(ResultStatusEnum.SUCCESS);
     }
 
@@ -222,5 +225,33 @@ public class OrderServiceImpl implements OrderService {
             }
         }
         return Result.build(ResultStatusEnum.SUCCESS, orders);
+    }
+
+    /**
+     * 立即支付订单
+     * @param orderIds 订单列表
+     * @return
+     */
+    @Override
+    @Transactional
+    public Result payOrderNow(List<Integer> orderIds) {
+        for (int orderId : orderIds) {
+            if (orderEnd(orderId)) {
+                throw new OrderException();
+            }
+            orderMapper.payOrder(OrderStatus.SUCCESS_PAY, orderId);
+        }
+        return Result.build(ResultStatusEnum.SUCCESS);
+    }
+
+    /**
+     * 检测order是否过期
+     */
+    @Transactional
+    public boolean orderEnd(int orderId) {
+        if (orderMapper.getOrderStatus(orderId) == 3) {
+            return true;
+        }
+        return false;
     }
 }

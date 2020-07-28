@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.Date;
 import java.util.List;
 
 
@@ -120,14 +119,21 @@ public class OrderController {
     /**
      * 从订单页支付一个待支付的订单
      * @param orderId
-     * @param request
      * @return
      */
     @PostMapping("/u/pay/order/{orderId}")
-    public Result payOrder(@PathVariable("orderId")int orderId,
-                           HttpServletRequest request) {
-        String studentCode = (String) request.getAttribute("studentCode");
-        return orderService.payOrder(studentCode, orderId);
+    public Result payOrder(@PathVariable("orderId")int orderId) {
+        return orderService.payOrder(orderId);
+    }
+
+    /**
+     * 立即支付
+     * @param orderId
+     * @return
+     */
+    @PostMapping("/u/pay/now")
+    public Result pay(@RequestBody List<Integer> orderId) {
+        return orderService.payOrderNow(orderId);
     }
 
 }

@@ -62,6 +62,11 @@ public enum ResultStatusEnum {
     NOT_HAVE_STOCK(-7, "货物存量不足"),
 
     /**
+     * 订单已过期
+     */
+    ORDER_ENDTIME(-8,"订单已经过期"),
+
+    /**
      * 请求错误
      */
     BIND_EXCEPTION(400);

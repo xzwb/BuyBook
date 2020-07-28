@@ -55,6 +55,8 @@ public class GlobalExceptionHandler {
             /* 购物车订单中有没货的 */
         } else if (e instanceof BuyCarException) {
             return Result.build(ResultStatusEnum.NOT_HAVE_STOCK);
+        } else if (e instanceof OrderException) {
+            return Result.build(ResultStatusEnum.ORDER_ENDTIME);
         }
         e.printStackTrace();
         return Result.build(ResultStatusEnum.EXCEPTION);

@@ -91,5 +91,15 @@
         where orderId = #{orderId};
     </select>
 
+    <!-- 支付订单 -->
+    <update id="payOrder">
+        update userOrder
+        set orderStatus = #{status, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler}
+        where orderId = #{orderId};
+    </update>
 
+    <!-- 获取订单状态 -->
+    <select id="getOrderStatus" resultType="int">
+        select orderStatus from userOrder where orderId = #{orderId};
+    </select>
 </mapper>

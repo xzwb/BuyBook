@@ -66,11 +66,10 @@ public interface OrderService {
 
     /**
      * 支付一个待支付的订单
-     * @param studentCode
      * @param orderId
      * @return
      */
-    Result payOrder(String studentCode, int orderId);
+    Result payOrder(int orderId);
 
 
     /**
@@ -80,4 +79,11 @@ public interface OrderService {
      * @return
      */
     Result makeOrder(MakeOrder makeOrder, String studentCode) throws IOException, ParseException;
+
+    /**
+     * 立即支付订单
+     * @param orderIds 订单列表
+     * @return
+     */
+    Result payOrderNow(List<Integer> orderIds);
 }

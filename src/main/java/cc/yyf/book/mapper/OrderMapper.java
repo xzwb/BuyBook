@@ -53,11 +53,24 @@ public interface OrderMapper {
                      @Param("newStatus")OrderStatus newStatus);
 
     /**
+     * 支付订单
+     * @param status
+     * @param orderId
+     */
+    void payOrder(@Param("status")OrderStatus status,
+                  @Param("orderId")int orderId);
+
+    /**
      * 通过订单号来获取bookId
      * @param orderId
      * @return
      */
     int getBookIdByOrderId(@Param("orderId") int orderId);
+
+    /**
+     * 获取订单状态
+     */
+    int getOrderStatus(@Param("orderId") int orderId);
 
     /**
      * 通过订单号查询该订单买了多少个
@@ -71,5 +84,7 @@ public interface OrderMapper {
      * 根据orderId获取订单信息
      */
     Order getOrderByOrderId(@Param("orderId") int orderId);
+
+
 
 }
