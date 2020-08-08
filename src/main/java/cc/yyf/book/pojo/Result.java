@@ -25,7 +25,6 @@ public class Result {
     private Result(int status, String message) {
         this.status = status;
         this.message = message;
-        this.data = null;
     }
 
     /** 使用build方法创建Result对象 **/
