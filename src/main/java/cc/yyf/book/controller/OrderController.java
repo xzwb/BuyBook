@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin
+@CrossOrigin(allowCredentials = "true")
 public class OrderController {
 
     @Autowired

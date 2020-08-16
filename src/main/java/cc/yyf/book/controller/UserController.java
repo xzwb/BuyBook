@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.text.ParseException;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(allowCredentials = "true")
 public class UserController {
 
     @Autowired

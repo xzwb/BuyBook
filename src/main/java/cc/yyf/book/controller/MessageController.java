@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
  * 卖家查看的消息
  */
 @RestController
-@CrossOrigin
+@CrossOrigin(allowCredentials = "true")
 public class MessageController {
 
     @Autowired

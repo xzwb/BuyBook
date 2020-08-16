@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * 注册
  */
-@CrossOrigin
+@CrossOrigin(allowCredentials = "true")
 @RestController
 public class RegisterController {
 
