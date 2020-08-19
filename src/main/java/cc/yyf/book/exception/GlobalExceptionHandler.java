@@ -21,9 +21,9 @@ import java.util.List;
  * 全局异常处理器
  */
 @Slf4j
-//@RestControllerAdvice
+@RestControllerAdvice
 public class GlobalExceptionHandler {
-//    @ExceptionHandler(Exception.class)
+    @ExceptionHandler(Exception.class)
     public Result except(HttpServletRequest request, Exception e) {
         /* 处理jsr303校验抛出的异常 */
         if (e instanceof MethodArgumentNotValidException) {

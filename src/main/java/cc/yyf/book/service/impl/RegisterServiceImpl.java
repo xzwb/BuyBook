@@ -72,7 +72,6 @@ public class RegisterServiceImpl implements RegisterService {
                 registerMapper.insertPerson(person);
                 // 使用异步保存头像文件
                 new SaveFileThread(part, src).run();
-                registerMapper.insertMoney(person.getStudentCode());
                 return Result.build(ResultStatusEnum.SUCCESS);
             } else {
                 return Result.build(ResultStatusEnum.ZFJW_FALSE);

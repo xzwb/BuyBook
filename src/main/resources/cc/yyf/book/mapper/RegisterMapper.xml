@@ -7,9 +7,4 @@
     <insert id="insertPerson" parameterType="person">
         insert into user values(#{studentCode}, #{userName}, #{headSrc}, #{password}, #{phoneNumber});
     </insert>
-
-    <!-- 创建money表中的用户记录 -->
-    <insert id="insertMoney">
-        insert into money values(#{studentCode}, default);
-    </insert>
 </mapper>

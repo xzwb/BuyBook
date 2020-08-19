@@ -12,9 +12,5 @@ public interface RegisterMapper {
      */
     void insertPerson(Person person);
 
-    /**
-     * 创建用户的财富收益表中的记录
-     * @param studentCode
-     */
-    void insertMoney(@Param("studentCode") String studentCode);
+
 }
