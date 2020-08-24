@@ -6,6 +6,7 @@ import cc.yyf.book.pojo.Result;
 import cc.yyf.book.pojo.ResultStatusEnum;
 import cc.yyf.book.service.LoginService;
 import cc.yyf.book.util.JWTUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import org.springframework.util.DigestUtils;
 import java.util.concurrent.TimeUnit;
 
 @Service
+@Slf4j
 public class LoginServiceImpl implements LoginService {
     @Autowired
     RedisTemplate redisTemplate;
@@ -29,6 +31,7 @@ public class LoginServiceImpl implements LoginService {
      */
     @Override
     public Result login(String studentCode, String password) {
+        log.info("***/a/login password: " + password);
         // 密码是加密后存入数据库的
         password = DigestUtils.md5DigestAsHex(password.getBytes());
         Person person = loginMapper.loginSelect(studentCode, password);

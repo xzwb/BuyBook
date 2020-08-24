@@ -4,10 +4,7 @@ import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -27,7 +24,7 @@ public class MessageController {
      * @param page
      * @return
      */
-    @GetMapping("/u/search/message")
+    @PostMapping("/u/search/message")
     public Result lookMessage(@RequestBody Page page,
                               HttpServletRequest request) {
         String studentCode = (String) request.getAttribute("studentCode");
@@ -40,7 +37,7 @@ public class MessageController {
      * @param request
      * @return
      */
-    @GetMapping("/u/search/sell")
+    @PostMapping("/u/search/sell")
     public Result getSell(@RequestBody Page page,
                           HttpServletRequest request) {
         String studentCode = (String) request.getAttribute("studentCode");

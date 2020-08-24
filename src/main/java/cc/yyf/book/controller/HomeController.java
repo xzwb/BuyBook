@@ -4,6 +4,7 @@ import cc.yyf.book.pojo.BookUpdate;
 import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.service.HomeService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import java.text.ParseException;
 
 @CrossOrigin(allowCredentials = "true")
 @RestController
+@Slf4j
 public class HomeController {
 
     @Autowired
@@ -42,9 +44,10 @@ public class HomeController {
     /**
      * 获取当前用户发布的书籍信息
      */
-    @GetMapping("/u/search/book/own")
+    @PostMapping("/u/search/book/own")
     public Result getBookMyself(@Valid @RequestBody Page page,
                                 HttpServletRequest request) throws IOException, ParseException {
+        log.info("page = " + page.toString());
         String studentCode = (String) request.getAttribute("studentCode");
         int from = (page.getPage() - 1) * page.getSize();
         int size = page.getSize();

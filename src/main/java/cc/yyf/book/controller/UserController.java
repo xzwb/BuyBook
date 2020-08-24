@@ -22,7 +22,7 @@ public class UserController {
      * @param page
      * @return
      */
-    @GetMapping("/u/search/user")
+    @PostMapping("/u/search/user")
     public Result searchUser(@Valid @RequestBody Page page) {
         return userService.searchUser(page);
     }
@@ -41,7 +41,7 @@ public class UserController {
      * 根据学号获取该学号用户发布的书籍信息
      * @return
      */
-    @GetMapping("/u/book/user")
+    @PostMapping("/u/book/user")
     public Result getBookByUser(@Valid @RequestBody Page page) throws IOException, ParseException {
         int from = (page.getPage() - 1) * page.getSize();
         int size = page.getSize();

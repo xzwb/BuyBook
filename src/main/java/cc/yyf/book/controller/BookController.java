@@ -61,7 +61,7 @@ public class BookController {
      * @param page
      * @return
      */
-    @GetMapping("/u/search/books")
+    @PostMapping("/u/search/books")
     public Result searchAllBooks(@Valid @RequestBody Page page) throws IOException, ParseException {
         int from = (page.getPage() - 1) * page.getSize();
         int size = page.getSize();
@@ -74,7 +74,7 @@ public class BookController {
      * @param page
      * @return
      */
-    @GetMapping("/u/search/some/book")
+    @PostMapping("/u/search/some/book")
     public Result searchBook(@Valid @RequestBody Page page) throws IOException, ParseException {
         String message = page.getMessage();
         int from = (page.getPage() - 1) * page.getSize();
@@ -87,7 +87,7 @@ public class BookController {
      * @param page
      * @return
      */
-    @GetMapping("/u/style/book")
+    @PostMapping("/u/style/book")
     public Result styleBook(@Valid @RequestBody Page page) throws IOException, ParseException {
         String message = page.getMessage();
         int from = (page.getPage() - 1) * page.getSize();

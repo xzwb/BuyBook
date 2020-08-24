@@ -5,6 +5,7 @@ import cc.yyf.book.pojo.Result;
 import cc.yyf.book.service.RegisterService;
 import cc.yyf.book.util.SnowFlake;
 import cc.yyf.book.zfjw.exception.PublicKeyException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +20,7 @@ import java.util.Map;
  */
 @CrossOrigin(allowCredentials = "true")
 @RestController
+@Slf4j
 public class RegisterController {
 
     @Autowired
@@ -48,6 +50,9 @@ public class RegisterController {
                            @RequestParam String smsCode,
                            @RequestParam String studentPassword,
                            HttpSession session) throws LoginException, PublicKeyException, cc.yyf.book.zfjw.exception.LoginException {
+        log.info("*****smsCode : " + smsCode);
+        log.info("*****smsCode : " + studentPassword);
+        log.info("*****person : " + person);
         // 雪花算法
         SnowFlake snowFlake = new SnowFlake(2, 3);
         String playSrcFile = snowFlake.nextId() + ".jpg";

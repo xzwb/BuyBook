@@ -37,7 +37,7 @@ public class OrderController {
      * @param request
      * @return
      */
-    @GetMapping("/u/search/buyCar")
+    @PostMapping("/u/search/buyCar")
     public Result searchCar(@RequestBody Page page,
                             HttpServletRequest request) throws IOException {
         String studentCode = (String) request.getAttribute("studentCode");
@@ -77,7 +77,7 @@ public class OrderController {
      * @param request
      * @return
      */
-    @GetMapping("/u/search/order")
+    @PostMapping("/u/search/order")
     public Result searchOrder(@Valid @RequestBody Page page,
                               HttpServletRequest request) {
         String studentCode = (String) request.getAttribute("studentCode");

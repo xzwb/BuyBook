@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,6 +26,7 @@ import java.util.List;
 public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public Result except(HttpServletRequest request, Exception e) {
+        log.info(new Date().toString());
         /* 处理jsr303校验抛出的异常 */
         if (e instanceof MethodArgumentNotValidException) {
             e.printStackTrace();
@@ -34,6 +36,7 @@ public class GlobalExceptionHandler {
             String errorMsg = fieldError.getDefaultMessage();
             return Result.build(ResultStatusEnum.BIND_EXCEPTION(errorMsg));
         } else if (e instanceof BindException) {
+            log.info("***不能为null");
             e.printStackTrace();
             BindException ex = (BindException) e;
             List<ObjectError> errors = ex.getAllErrors();

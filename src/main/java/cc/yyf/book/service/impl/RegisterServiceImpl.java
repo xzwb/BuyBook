@@ -88,12 +88,13 @@ public class RegisterServiceImpl implements RegisterService {
      * @return
      */
     private Boolean smsCodeService(String phoneNumber, String smsCode) {
-        // 如果短信验证码和redis中的一致就删除redis中的验证码
-        if (smsCode.equals(redisTemplate.opsForValue().get(phoneNumber))) {
-            redisTemplate.delete(phoneNumber);
-            return true;
-        }
-        return false;
+        return true;
+//        // 如果短信验证码和redis中的一致就删除redis中的验证码
+//        if (smsCode.equals(redisTemplate.opsForValue().get(phoneNumber))) {
+//            redisTemplate.delete(phoneNumber);
+//            return true;
+//        }
+//        return false;
     }
     /**
      * 验证是不是本校学生
