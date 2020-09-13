@@ -25,4 +25,11 @@ public interface UserMapper {
      * @return
      */
     Person getPersonByStudentCode(@Param("studentCode") String studentCode);
+
+    /**
+     * 查询用户
+     * @param message
+     * @return
+     */
+    int getPersonTotal(@Param("message") String message);
 }

@@ -15,4 +15,9 @@
     <select id="getPersonByStudentCode" resultType="person">
         select *from user where studentCode = #{studentCode};
     </select>
+
+    <!-- 查询用户数量 -->
+    <select id="getPersonTotal">
+        select count(*) from user where studentCode = #{message} or userName like concat('%', #{message}, '%');
+    </select>
 </mapper>

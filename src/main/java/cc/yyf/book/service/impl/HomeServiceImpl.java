@@ -26,7 +26,9 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Service
@@ -90,7 +92,9 @@ public class HomeServiceImpl implements HomeService {
         for (SearchHit documentFields : searchResponse.getHits().getHits()) {
             books.add(Book.build(documentFields.getSourceAsMap()));
         }
-        return Result.build(ResultStatusEnum.SUCCESS, books);
+        Map map = new HashMap();
+        map.put("total", homeMapper.getOwnBookTotal(studentCode));
+        return Result.build(ResultStatusEnum.SUCCESS, books, map);
     }
 
     /**

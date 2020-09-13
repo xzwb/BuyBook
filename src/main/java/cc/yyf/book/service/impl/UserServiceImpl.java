@@ -1,5 +1,6 @@
 package cc.yyf.book.service.impl;
 
+import cc.yyf.book.mapper.HomeMapper;
 import cc.yyf.book.mapper.UserMapper;
 import cc.yyf.book.pojo.*;
 import cc.yyf.book.service.UserService;
@@ -21,13 +22,18 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
     UserMapper userMapper;
+
+    @Autowired
+    HomeMapper homeMapper;
 
     @Autowired
     RestHighLevelClient restHighLevelClient;
@@ -44,7 +50,9 @@ public class UserServiceImpl implements UserService {
         int from = (page.getPage() - 1) * page.getSize();
         List<Person> people = new ArrayList<>();
         people = userMapper.selectPerson(from, page.getSize(), page.getMessage());
-        return Result.build(ResultStatusEnum.SUCCESS, people);
+        Map map = new HashMap();
+        map.put("total", userMapper.getPersonTotal(page.getMessage()));
+        return Result.build(ResultStatusEnum.SUCCESS, people, map);
     }
 
     /**
@@ -80,6 +88,8 @@ public class UserServiceImpl implements UserService {
         for (SearchHit documentFields : searchResponse.getHits().getHits()) {
             books.add(Book.build(documentFields.getSourceAsMap()));
         }
-        return Result.build(ResultStatusEnum.SUCCESS, books);
+        Map map = new HashMap();
+        map.put("total", homeMapper.getOwnBookTotal(studentCode));
+        return Result.build(ResultStatusEnum.SUCCESS, books, map);
     }
 }

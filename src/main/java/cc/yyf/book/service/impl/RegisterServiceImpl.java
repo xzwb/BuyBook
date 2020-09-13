@@ -11,6 +11,7 @@ import cc.yyf.book.zfjw.model.LoginStatus;
 import cc.yyf.book.zfjw.model.User;
 import cc.yyf.book.zfjw.service.LoginService;
 import cc.yyf.book.zfjw.service.impl.LoginServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -22,6 +23,7 @@ import javax.security.auth.login.LoginException;
 import javax.servlet.http.Part;
 
 @Service
+@Slf4j
 public class RegisterServiceImpl implements RegisterService {
 
     @Autowired
@@ -46,6 +48,7 @@ public class RegisterServiceImpl implements RegisterService {
      */
     @Override
     public Result getSMSCode(String phoneNumber) {
+        log.info("电话号为: " + phoneNumber + " 的用户获取短信验证码");
         rabbitTemplate.convertAndSend("exchange_sms_yyf", "sms", phoneNumber);
         return  Result.build(ResultStatusEnum.SUCCESS);
     }

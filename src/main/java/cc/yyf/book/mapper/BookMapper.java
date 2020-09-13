@@ -49,4 +49,9 @@ public interface BookMapper {
     void orderJobMapper(@Param("time") String time,
                         @Param("oldStatus") OrderStatus oldStatus,
                         @Param("newStatus") OrderStatus newStatus);
+
+    /**
+     * 获取书籍总数
+     */
+    int getBookTotal();
 }

@@ -6,7 +6,9 @@ import cc.yyf.book.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class MessageServiceImpl implements MessageService {
@@ -25,7 +27,9 @@ public class MessageServiceImpl implements MessageService {
         int from = (page.getPage() - 1) * page.getSize();
         int size = page.getSize();
         List<SellBook> sellBook = messageMapper.getSellBook(from, size, OrderStatus.SUCCESS_PAY, studentCode);
-        return Result.build(ResultStatusEnum.SUCCESS, sellBook);
+        Map map = new HashMap();
+        map.put("total", messageMapper.getSellBookTotal(OrderStatus.SUCCESS_PAY, studentCode));
+        return Result.build(ResultStatusEnum.SUCCESS, sellBook, map);
     }
 
     /**
@@ -39,6 +43,8 @@ public class MessageServiceImpl implements MessageService {
         int from = (page.getPage() - 1) * page.getSize();
         int size = page.getSize();
         List<SellBook> sellBook = messageMapper.getSellBook(from, size, OrderStatus.OK, studentCode);
-        return Result.build(ResultStatusEnum.SUCCESS, sellBook);
+        Map map = new HashMap();
+        map.put("total", messageMapper.getSellBookTotal(OrderStatus.OK, studentCode));
+        return Result.build(ResultStatusEnum.SUCCESS, sellBook, map);
     }
 }

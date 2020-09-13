@@ -17,4 +17,9 @@
         bookStyle = #{book.bookStyle, typeHandler = cc.yyf.book.typeHandler.MyTypeHandler}
         where bookId = #{book.bookId} and studentCode = #{studentCode};
     </update>
+
+    <!-- 获取自己发布的书籍总数 -->
+    <select id="getOwnBookTotal">
+        select count(*) from book where studentCode = #{studentCode};
+    </select>
 </mapper>

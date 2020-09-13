@@ -23,4 +23,13 @@ public interface MessageMapper {
                                @Param("status")OrderStatus status,
                                @Param("studentCode") String studentCode);
 
+    /**
+     * 获取卖出的书籍总数
+     * @param status
+     * @param studentCode
+     * @return
+     */
+    int getSellBookTotal(@Param("status")OrderStatus status,
+                         @Param("studentCode") String studentCode);
+
 }

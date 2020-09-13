@@ -59,7 +59,10 @@ public class OrderServiceImpl implements OrderService {
                 buyCars.add(getBuyCar(studentCode, key));
             }
         }
-        return Result.build(ResultStatusEnum.SUCCESS, buyCars);
+        Set<String> fieldKeySet = redisTemplate.opsForHash().keys(BookUtil.buyCar+studentCode);
+        Map map = new HashMap();
+        map.put("total", fieldKeySet.size());
+        return Result.build(ResultStatusEnum.SUCCESS, buyCars, map);
     }
 
     /**
@@ -144,7 +147,9 @@ public class OrderServiceImpl implements OrderService {
     public Result searchOrder(String studentCode, int from, int page) {
         List<UserOrder> list = new ArrayList<>();
         list = orderMapper.searchOrder(studentCode, from, page);
-        return Result.build(ResultStatusEnum.SUCCESS, list);
+        Map map = new HashMap();
+        map.put("total", orderMapper.getOrderTotal(studentCode));
+        return Result.build(ResultStatusEnum.SUCCESS, list, map);
     }
 
     /**
@@ -159,7 +164,9 @@ public class OrderServiceImpl implements OrderService {
     public Result searchOrderByStyle(String studentCode, int status, int from, int size) {
         List<UserOrder> list = new ArrayList<>();
         list = orderMapper.searchOrderByStyle(studentCode, status, from, size);
-        return Result.build(ResultStatusEnum.SUCCESS, list);
+        Map map = new HashMap();
+        map.put("total", orderMapper.getOrderByStyleTotal(studentCode, status));
+        return Result.build(ResultStatusEnum.SUCCESS, list, map);
     }
 
 

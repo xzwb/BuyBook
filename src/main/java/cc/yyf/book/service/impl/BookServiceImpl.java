@@ -110,8 +110,10 @@ public class BookServiceImpl implements BookService {
         for (SearchHit documentFields : search.getHits().getHits()) {
             books.add(Book.build(documentFields.getSourceAsMap()));
         }
+        Map map = new HashMap();
+        map.put("total", bookMapper.getBookTotal());
 
-        return Result.build(ResultStatusEnum.SUCCESS, books);
+        return Result.build(ResultStatusEnum.SUCCESS, books, map);
     }
 
     /**

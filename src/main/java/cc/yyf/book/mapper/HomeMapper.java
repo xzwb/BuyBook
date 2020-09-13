@@ -21,4 +21,11 @@ public interface HomeMapper {
      */
     void updateBook(@Param("studentCode") String studentCode,
                     @Param("book")BookUpdate book);
+
+    /**
+     * 获取自己发布书籍的总数
+     * @param studentCode
+     * @return
+     */
+    int getOwnBookTotal(@Param("studentCode") String studentCode);
 }

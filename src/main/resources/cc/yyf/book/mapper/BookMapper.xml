@@ -35,4 +35,9 @@
     <update id="orderJobMapper">
         update userOrder set orderStatus = #{newStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler} where orderStatus = #{oldStatus, typeHandler = cc.yyf.book.typeHandler.OrderEnumTypeHandler} and orderEndTime &lt; #{time};
     </update>
+
+    <!-- 获取book总数 -->
+    <select id="getBookTotal">
+        select count(*) from book;
+    </select>
 </mapper>

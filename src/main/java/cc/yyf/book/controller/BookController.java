@@ -5,6 +5,7 @@ import cc.yyf.book.pojo.Page;
 import cc.yyf.book.pojo.Result;
 import cc.yyf.book.service.BookService;
 import cc.yyf.book.util.SnowFlake;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +18,7 @@ import java.util.Date;
 
 @CrossOrigin(allowCredentials = "true")
 @RestController
+@Slf4j
 public class BookController {
 
     @Autowired
@@ -34,6 +36,7 @@ public class BookController {
                           HttpServletRequest request,
                           @RequestPart("file") Part part) {
         book.setStudentCode((String) request.getAttribute("studentCode"));
+        log.info("学号为: " + book.getStudentCode() + " 的用户发布书籍" + book);
         // 获取图书的发布时间
         book.setBookDate(new Date());
         // 雪花算法

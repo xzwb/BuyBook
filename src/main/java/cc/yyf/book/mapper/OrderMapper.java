@@ -86,5 +86,19 @@ public interface OrderMapper {
     Order getOrderByOrderId(@Param("orderId") int orderId);
 
 
+    /**
+     * 获取订单总数
+     * @param studentCode
+     * @return
+     */
+    int getOrderTotal(@Param("studentCode") String studentCode);
 
+    /**
+     * 根据订单类别获取订单个数
+     * @param studentCode
+     * @param status
+     * @return
+     */
+    int getOrderByStyleTotal(@Param("studentCode") String studentCode,
+                             @Param("status") int status);
 }
