@@ -104,12 +104,12 @@
     </select>
 
     <!-- 获取订单总数 -->
-    <select id="getOrderTotal">
+    <select id="getOrderTotal" resultType="int">
         select count(*) from userOrder where studentCode = #{studentCode};
     </select>
 
     <!-- 根据订单类别获取订单数量 -->
-    <select id="getOrderByStyleTotal">
+    <select id="getOrderByStyleTotal" resultType="int">
         select count(*) from userOrder where studentCode = #{studentCode} and orderStatus = #{status};
     </select>
 </mapper>

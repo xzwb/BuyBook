@@ -19,7 +19,7 @@
     </update>
 
     <!-- 获取自己发布的书籍总数 -->
-    <select id="getOwnBookTotal">
+    <select id="getOwnBookTotal" resultType="int">
         select count(*) from book where studentCode = #{studentCode};
     </select>
 </mapper>

@@ -18,7 +18,7 @@
     </select>
 
     <!-- 获取卖出书籍的总数 -->
-    <select id="getSellBookTotal">
+    <select id="getSellBookTotal" resultType="int">
         select count(*) from userOrder u
         left join book b
         on u.bookId = b.bookId

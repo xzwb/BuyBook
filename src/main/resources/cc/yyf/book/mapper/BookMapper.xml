@@ -37,7 +37,7 @@
     </update>
 
     <!-- 获取book总数 -->
-    <select id="getBookTotal">
+    <select id="getBookTotal" resultType="int">
         select count(*) from book;
     </select>
 </mapper>
