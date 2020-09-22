@@ -92,7 +92,7 @@ public class OrderController {
      * @param request
      * @return
      */
-    @GetMapping("/u/search/order/style")
+    @PostMapping("/u/search/order/style")
     public Result searchOrders(@Valid @RequestBody Page page,
                                HttpServletRequest request) {
         int orderStatus = Integer.parseInt(page.getMessage());
