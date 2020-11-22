@@ -3,6 +3,8 @@ package cc.yyf.book;
 import cc.yyf.book.pojo.Book;
 import cc.yyf.book.util.ESIndex;
 import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.elasticsearch.action.delete.DeleteRequest;
 import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.action.get.GetRequest;
@@ -25,6 +27,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -42,9 +48,19 @@ class BookApplicationTests {
      */
     @Test
     void contextLoads() throws IOException {
-        GetIndexRequest request = new GetIndexRequest("book");
-        boolean exists = restHighLevelClient.indices().exists(request, RequestOptions.DEFAULT);
-        System.out.println(exists);
+//        GetIndexRequest request = new GetIndexRequest("book");
+//        boolean exists = restHighLevelClient.indices().exists(request, RequestOptions.DEFAULT);
+//        System.out.println(exists);
+        ObjectMapper objectMapper = new ObjectMapper();
+        Map<String, List<MyBean>> map = new HashMap<>();
+        List<MyBean> list = new ArrayList<>();
+        map.put("a", list);
+        list.add(new MyBean("ss", "18"));
+        JavaType javaType = objectMapper.getTypeFactory().constructParametricType(Map.class, String.class, List.class);
+        String s = objectMapper.writeValueAsString(map);
+        Map<String, List<MyBean>> map1 = objectMapper.readValue(s, javaType);
+        System.out.println(map1);
+        System.out.println(s);
     }
 
     /**
